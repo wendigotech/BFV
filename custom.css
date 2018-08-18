@@ -1,0 +1,24 @@
+[class*=' imghvr-']>img,
+[class^=imghvr-]>img {
+    vertical-align: top;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+[class*=' imghvr-'],
+[class^=imghvr-] {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    background-color: #2266a5;
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width: 100%;
+    height: 100%;
+}
