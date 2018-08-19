@@ -66,8 +66,7 @@
                                 <?php if ( $tag_choice->have_posts() ) : ?>
                                     <div class="carousel-inner"> 
                                         <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
-                                            <?php $tag_choice_item_number = 0; ?>
-                                            <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 6 ) : $tag_choice->the_post(); ?>
+                                            <?php while ( $tag_choice->have_posts() ) : $tag_choice->the_post(); ?>
                                                 <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
                                                     <?php
                                                         if ( has_post_thumbnail() ) {
