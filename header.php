@@ -59,8 +59,8 @@
                                     <li data-target="#carousel1" data-slide-to="5"></li>
                                 </ol>                                 
                                 <div class="carousel-inner"> 
-                                    <div class="carousel-item active" style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-auto-rows:120px;grid-gap:20px;"> 
-                                        <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
+                                    <div class="carousel-item active mb-3" style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-auto-rows:120px;grid-gap:20px;"> 
+                                        <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur ">
                                             <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
                                             <figcaption>
                                                 <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
@@ -101,7 +101,7 @@
                                             </figcaption>
                                         </figure>
                                     </div>
-                                    <div class="carousel-item" style="display:grid;grid-template-columns:2fr 1fr 2fr 2fr 3fr 3fr 0fr 4fr;grid-auto-rows:120px;grid-gap:20px;"> 
+                                    <div class="carousel-item" style="display:grid;grid-template-columns:2fr 1fr 2fr 2fr 3fr 3fr 0fr 4fr;grid-template-rows:100px 100px;grid-gap:20px;"> 
                                         <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
                                             <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
                                             <figcaption>
