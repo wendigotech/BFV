@@ -13157,3 +13157,8 @@ h1.navbar-brand > a {
 .wpcf7 input[type=submit] {
     white-space: normal;
 }
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}

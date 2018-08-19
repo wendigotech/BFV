@@ -44,3 +44,8 @@ h1.navbar-brand > a {
 .btn {
     white-space: normal;
 }
+
+.lead {
+    font-size: $lead-font-size;
+    font-weight: $lead-font-weight;
+}
