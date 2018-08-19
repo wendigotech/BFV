@@ -81,16 +81,6 @@
                                                         <?php the_excerpt( ); ?>
                                                     </figcaption>
                                                 </figure>
-                                                <figure style="grid-area:1 / 3 / auto / 5;" class="imghvr-blur">
-                                                    <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
-                                                    <figcaption>
-                                                        <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                        <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                        <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                            <?php _e( 'Play', 'st2' ); ?>
-                                                        </button>
-                                                    </figcaption>
-                                                </figure>
                                             <?php endwhile; ?>
                                             <?php wp_reset_postdata(); ?>
                                             <figure style="grid-area:1 / 5 / auto / 9;" class="imghvr-blur">
