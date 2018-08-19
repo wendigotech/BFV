@@ -61,7 +61,8 @@
                                 <div class="carousel-inner"> 
                                     <?php
                                         $pick_args = array(
-                                            'tag_id' => 'pick'
+                                            'tag_id' => 'pick',
+                                            'tag' => 'pick'
                                         )
                                     ?>
                                     <?php $pick = new WP_Query( $pick_args ); ?>
