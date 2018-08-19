@@ -57,15 +57,14 @@
                                     <li data-target="#carousel1" data-slide-to="2"></li>                                     
                                     <li data-target="#carousel1" data-slide-to="5"></li>
                                 </ol>                                 
-                                <div class="carousel-inner"> 
-                                    <?php
-                                        $tag_choice_args = array(
-                                            'tag_id' => 'choice',
-                                            'tag' => 'choice'
-                                        )
-                                    ?>
-                                    <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
-                                    <?php if ( $tag_choice->have_posts() ) : ?>
+                                <?php
+                                    $tag_choice_args = array(
+                                        'tag_id' => 'choice'
+                                    )
+                                ?>
+                                <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
+                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                    <div class="carousel-inner"> 
                                         <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
                                             <?php while ( $tag_choice->have_posts() ) : $tag_choice->the_post(); ?>
                                                 <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
@@ -133,11 +132,11 @@
                                                     </button>
                                                 </figcaption>
                                             </figure>
-                                        </div>
-                                    <?php else : ?>
-                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                    <?php endif; ?> 
-                                </div>                                 
+                                        </div>                                         
+                                    </div>
+                                <?php else : ?>
+                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                <?php endif; ?> 
                             </div>
                         </div>                         
                     </div>
