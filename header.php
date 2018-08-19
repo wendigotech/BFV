@@ -66,7 +66,8 @@
                                 <?php if ( $tag_choice->have_posts() ) : ?>
                                     <div class="carousel-inner"> 
                                         <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
-                                            <?php while ( $tag_choice->have_posts() ) : $tag_choice->the_post(); ?>
+                                            <?php $tag_choice_item_number = 0; ?>
+                                            <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 6 ) : $tag_choice->the_post(); ?>
                                                 <figure style="grid-area:1 / 3 / auto / 5;" class="imghvr-blur">
                                                     <?php
                                                         if ( has_post_thumbnail() ) {
@@ -82,7 +83,7 @@
                                                 </figure>
                                             <?php endwhile; ?>
                                             <?php wp_reset_postdata(); ?>
-                                            <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
+                                            <figure style="grid-area:1 / 5 / auto / 8;" class="imghvr-blur">
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail( 'normal' );
@@ -95,44 +96,56 @@
                                                     <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
-                                            <figure style="grid-area:1 / 5 / auto / 9;" class="imghvr-blur">
-                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                            <figure style="grid-area:2 / 1 / 3 / 4;" class="imghvr-blur">
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'normal' );
+                                                    }
+                                                 ?>
                                                 <figcaption>
-                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                        <?php _e( 'Play', 'st2' ); ?>
-                                                    </button>
+                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                    <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
-                                            <figure class="imghvr-fade" style="grid-area:2 / 1 / 3 / 4;">
-                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                            <figure style="grid-area:2 / 6 / 3 / 8;" class="imghvr-blur">
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'normal' );
+                                                    }
+                                                 ?>
                                                 <figcaption>
-                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                        <?php _e( 'Play', 'st2' ); ?>
-                                                    </button>
+                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                    <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
-                                            <figure class="imghvr-fade" style="grid-area:2 / 4 / 3 / 6;">
-                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                            <figure style="grid-area:2 / 4 / 3 / 6;" class="imghvr-blur">
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'normal' );
+                                                    }
+                                                 ?>
                                                 <figcaption>
-                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                        <?php _e( 'Play', 'st2' ); ?>
-                                                    </button>
+                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                    <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
-                                            <figure class="imghvr-fade" style="grid-area:2 / 6 / 3 / 9;">
-                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                            <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'normal' );
+                                                    }
+                                                 ?>
                                                 <figcaption>
-                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                        <?php _e( 'Play', 'st2' ); ?>
-                                                    </button>
+                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                    <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
                                         </div>                                         
