@@ -63,7 +63,7 @@ get_header(); ?>
                         <?php dynamic_sidebar( 'left-sidebar' ); ?>
                     <?php endif; ?>                                                                           
                 </div>
-            <?php endif; ?>                              
+            <?php endif; ?> 
             <?php if ( get_theme_mod( 'show_right_sidebar' ) ) : ?>
                 <div class="col-md-4 widget-area" role="complementary" id="right-sidebar"> 
                     <?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
