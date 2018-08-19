@@ -60,16 +60,15 @@
                                 </ol>                                 
                                 <div class="carousel-inner"> 
                                     <?php
-                                        $pick_args = array(
-                                            'tag_id' => 'pick',
-                                            'tag' => 'pick'
+                                        $tag_pick_args = array(
+                                            'tag_id' => 'pick'
                                         )
                                     ?>
-                                    <?php $pick = new WP_Query( $pick_args ); ?>
-                                    <?php if ( $pick->have_posts() ) : ?>
-                                        <div style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;" <?php post_class( 'carousel-item active ' ); ?> id="post-<?php the_ID(); ?>"> 
-                                            <?php $pick_item_number = 0; ?>
-                                            <?php while ( $pick->have_posts() && $pick_item_number++ < 6 ) : $pick->the_post(); ?>
+                                    <?php $tag_pick = new WP_Query( $tag_pick_args ); ?>
+                                    <?php if ( $tag_pick->have_posts() ) : ?>
+                                        <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
+                                            <?php $tag_pick_item_number = 0; ?>
+                                            <?php while ( $tag_pick->have_posts() && $tag_pick_item_number++ < 6 ) : $tag_pick->the_post(); ?>
                                                 <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
                                                     <?php
                                                         if ( has_post_thumbnail() ) {
