@@ -57,14 +57,15 @@
                                     <li data-target="#carousel1" data-slide-to="2"></li>                                     
                                     <li data-target="#carousel1" data-slide-to="5"></li>
                                 </ol>                                 
-                                <?php
-                                    $tag_choice_args = array(
-                                        'tag_id' => 'choice'
-                                    )
-                                ?>
-                                <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
-                                <?php if ( $tag_choice->have_posts() ) : ?>
-                                    <div class="carousel-inner"> 
+                                <div class="carousel-inner"> 
+                                    <?php
+                                        $tag_choice_args = array(
+                                            'tag_id' => 'choice',
+                                            'tag' => 'choice'
+                                        )
+                                    ?>
+                                    <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
+                                    <?php if ( $tag_choice->have_posts() ) : ?>
                                         <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
                                             <?php while ( $tag_choice->have_posts() ) : $tag_choice->the_post(); ?>
                                                 <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
@@ -80,37 +81,21 @@
                                                         <?php the_excerpt( ); ?>
                                                     </figcaption>
                                                 </figure>
+                                                <figure style="grid-area:1 / 3 / auto / 7;" class="imghvr-blur">
+                                                    <?php
+                                                        if ( has_post_thumbnail() ) {
+                                                            the_post_thumbnail( 'normal' );
+                                                        }
+                                                     ?>
+                                                    <figcaption>
+                                                        <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                        <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                        <?php the_excerpt( ); ?>
+                                                    </figcaption>
+                                                </figure>
                                             <?php endwhile; ?>
                                             <?php wp_reset_postdata(); ?>
-                                            <?php
-                                                $tag_choice_args = array(
-                                                    'post_type' => 'tag_choice',
-                                                    'nopaging' => true,
-                                                    'order' => 'ASC',
-                                                    'orderby' => 'date'
-                                                )
-                                            ?>
-                                            <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
-                                            <?php if ( $tag_choice->have_posts() ) : ?>
-                                                <?php while ( $tag_choice->have_posts() ) : $tag_choice->the_post(); ?>
-                                                    <figure style="grid-area:1 / 3 / auto / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                        <?php
-                                                            if ( has_post_thumbnail() ) {
-                                                                the_post_thumbnail( 'normal' );
-                                                            }
-                                                         ?>
-                                                        <figcaption>
-                                                            <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                            <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                            <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                            <?php the_excerpt( ); ?>
-                                                        </figcaption>
-                                                    </figure>
-                                                <?php endwhile; ?>
-                                                <?php wp_reset_postdata(); ?>
-                                            <?php else : ?>
-                                                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                            <?php endif; ?>
                                             <figure style="grid-area:1 / 7 / auto / 9;" class="imghvr-blur">
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
@@ -163,11 +148,11 @@
                                                     <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
-                                        </div>                                         
-                                    </div>
-                                <?php else : ?>
-                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                <?php endif; ?> 
+                                        </div>
+                                    <?php else : ?>
+                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                    <?php endif; ?> 
+                                </div>                                 
                             </div>
                         </div>                         
                     </div>
