@@ -228,17 +228,6 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'header_settings'
     ) ) );
 
-    $wp_customize->add_setting( 'jumbotron_text_color', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_text_color', array(
-        'label' => __( 'Jumbotron Paragraph Color', 'st2' ),
-        'type' => 'color',
-        'section' => 'header_settings'
-    ) ) );
-
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize

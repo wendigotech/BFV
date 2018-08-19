@@ -66,8 +66,8 @@
                                     ?>
                                     <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
                                     <?php if ( $tag_choice->have_posts() ) : ?>
-                                        <?php while ( $tag_choice->have_posts() ) : $tag_choice->the_post(); ?>
-                                            <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
+                                        <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
+                                            <?php while ( $tag_choice->have_posts() ) : $tag_choice->the_post(); ?>
                                                 <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
                                                     <?php
                                                         if ( has_post_thumbnail() ) {
@@ -91,49 +91,49 @@
                                                         </button>
                                                     </figcaption>
                                                 </figure>
-                                                <figure style="grid-area:1 / 5 / auto / 9;" class="imghvr-blur">
-                                                    <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
-                                                    <figcaption>
-                                                        <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                        <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                        <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                            <?php _e( 'Play', 'st2' ); ?>
-                                                        </button>
-                                                    </figcaption>
-                                                </figure>
-                                                <figure class="imghvr-fade" style="grid-area:2 / 1 / 3 / 4;">
-                                                    <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
-                                                    <figcaption>
-                                                        <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                        <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                        <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                            <?php _e( 'Play', 'st2' ); ?>
-                                                        </button>
-                                                    </figcaption>
-                                                </figure>
-                                                <figure class="imghvr-fade" style="grid-area:2 / 4 / 3 / 6;">
-                                                    <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
-                                                    <figcaption>
-                                                        <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                        <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                        <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                            <?php _e( 'Play', 'st2' ); ?>
-                                                        </button>
-                                                    </figcaption>
-                                                </figure>
-                                                <figure class="imghvr-fade" style="grid-area:2 / 6 / 3 / 9;">
-                                                    <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
-                                                    <figcaption>
-                                                        <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                                                        <p><?php _e( 'Paragraph', 'st2' ); ?></p>
-                                                        <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
-                                                            <?php _e( 'Play', 'st2' ); ?>
-                                                        </button>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        <?php endwhile; ?>
-                                        <?php wp_reset_postdata(); ?>
+                                            <?php endwhile; ?>
+                                            <?php wp_reset_postdata(); ?>
+                                            <figure style="grid-area:1 / 5 / auto / 9;" class="imghvr-blur">
+                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                                <figcaption>
+                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
+                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
+                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
+                                                        <?php _e( 'Play', 'st2' ); ?>
+                                                    </button>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="imghvr-fade" style="grid-area:2 / 1 / 3 / 4;">
+                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                                <figcaption>
+                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
+                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
+                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
+                                                        <?php _e( 'Play', 'st2' ); ?>
+                                                    </button>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="imghvr-fade" style="grid-area:2 / 4 / 3 / 6;">
+                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                                <figcaption>
+                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
+                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
+                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
+                                                        <?php _e( 'Play', 'st2' ); ?>
+                                                    </button>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="imghvr-fade" style="grid-area:2 / 6 / 3 / 9;">
+                                                <img src="https://images.unsplash.com/photo-1518127864129-8d0834d765bc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=687274d645f07306fb95328c405048c5">
+                                                <figcaption>
+                                                    <h6><?php _e( 'Heading 6', 'st2' ); ?></h6>
+                                                    <p><?php _e( 'Paragraph', 'st2' ); ?></p>
+                                                    <button class="btn btn-primary active btn-sm" role="button" aria-pressed="true" type="button">
+                                                        <?php _e( 'Play', 'st2' ); ?>
+                                                    </button>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
                                     <?php else : ?>
                                         <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                                     <?php endif; ?> 
