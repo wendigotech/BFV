@@ -64,10 +64,10 @@
                                 ?>
                                 <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
                                 <?php if ( $tag_choice->have_posts() ) : ?>
-                                    <div class="carousel-inner"> 
-                                        <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
-                                            <?php $tag_choice_item_number = 0; ?>
-                                            <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 6 ) : $tag_choice->the_post(); ?>
+                                    <?php $tag_choice_item_number = 0; ?>
+                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 6 ) : $tag_choice->the_post(); ?>
+                                        <div class="carousel-inner"> 
+                                            <div class="carousel-item active " style="display:grid;grid-template-columns:2fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;grid-template-rows:none none;grid-auto-rows:140px;grid-gap:20px;"> 
                                                 <figure style="grid-area:1 / 1 / auto / 3;" class="imghvr-blur">
                                                     <?php
                                                         if ( has_post_thumbnail() ) {
@@ -146,10 +146,10 @@
                                                         <?php the_excerpt( ); ?>
                                                     </figcaption>
                                                 </figure>
-                                            <?php endwhile; ?>
-                                            <?php wp_reset_postdata(); ?>
-                                        </div>                                         
-                                    </div>
+                                            </div>                                             
+                                        </div>
+                                    <?php endwhile; ?>
+                                    <?php wp_reset_postdata(); ?>
                                 <?php else : ?>
                                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                                 <?php endif; ?> 
