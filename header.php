@@ -82,7 +82,7 @@
                                                 </figure>
                                             <?php endwhile; ?>
                                             <?php wp_reset_postdata(); ?>
-                                            <figure style="grid-area:1 / 3 / auto / 5;" class="imghvr-blur">
+                                            <figure style="grid-area:1 / 3 / auto / 7;" class="imghvr-blur">
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail( 'normal' );
@@ -95,7 +95,7 @@
                                                     <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
-                                            <figure style="grid-area:1 / 5 / auto / 8;" class="imghvr-blur">
+                                            <figure style="grid-area:1 / 7 / auto / 9;" class="imghvr-blur">
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail( 'normal' );
@@ -121,7 +121,7 @@
                                                     <?php the_excerpt( ); ?>
                                                 </figcaption>
                                             </figure>
-                                            <figure style="grid-area:2 / 6 / 3 / 8;" class="imghvr-blur">
+                                            <figure style="grid-area:2 / 6 / 3 / 9;" class="imghvr-blur">
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail( 'normal' );
