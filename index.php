@@ -10,7 +10,7 @@ get_header(); ?>
         ?>
         <?php $casino = new WP_Query( $casino_args ); ?>
         <?php if ( $casino->have_posts() ) : ?>
-            <div class="row">
+            <div class="row grid-content">
                 <?php while ( $casino->have_posts() ) : $casino->the_post(); ?>
                     <figure1 style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
                         <?php
