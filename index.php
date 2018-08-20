@@ -5,12 +5,9 @@ get_header(); ?>
     <div class="container">
         <?php
             $casino_args = array(
-                'post_type' => 'casino',
-                'posts_per_page' => '6',
-                'order' => 'ASC',
-                'orderby' => 'date'
+                'category_name' => 'casino'
             )
-        ?>
+         ?>
         <?php $casino = new WP_Query( $casino_args ); ?>
         <?php if ( $casino->have_posts() ) : ?>
             <div <?php post_class( 'row grid-content' ); ?> id="post-<?php the_ID(); ?>">
