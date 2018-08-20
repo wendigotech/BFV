@@ -23,9 +23,9 @@
     height: 100%;
 }
 
-/* .grid-content {
+.grid-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     grid-gap: 10px;
-} */
+}
