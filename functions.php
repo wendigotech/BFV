@@ -120,26 +120,6 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Left Sidebar', 'st2' ),
-        'id' => 'left-sidebar',
-        'description' => 'Left Sidebar widget area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Right Sidebar', 'st2' ),
-        'id' => 'right-sidebar',
-        'description' => 'Right Sidebar widget area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Bottom Full', 'st2' ),
         'id' => 'footerfull',
         'description' => 'Full bottom widget with dynamic grid',
@@ -227,30 +207,6 @@ function st2_customize_register( $wp_customize ) {
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
-
-    $wp_customize->add_setting( 'show_left_sidebar', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_left_sidebar', array(
-        'label' => __( 'Show Left Sidebar', 'st2' ),
-        'description' => __( 'Activate the Left Sidebar', 'st2' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
-
-    $wp_customize->add_setting( 'show_right_sidebar', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_right_sidebar', array(
-        'label' => __( 'Show Right Sidebar', 'st2' ),
-        'description' => __( 'Activate the Right Sidebar', 'st2' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
