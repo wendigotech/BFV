@@ -30,25 +30,20 @@ get_header(); ?>
             <?php else : ?>
                 <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
             <?php endif; ?>
-            <?php if ( $casino->have_posts() ) : ?>
-                <?php while ( $casino->have_posts() ) : $casino->the_post(); ?>
-                    <figure2 style="grid-area:1 / 3 / 3 / 4;" class="imghvr-blur">
-                        <?php
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail( 'normal' );
-                            }
-                         ?>
-                        <figcaption>
-                            <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                            <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                            <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                            <?php the_excerpt( ); ?>
-                        </figcaption>
-                    </figure2>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-            <?php else : ?>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+            <?php if ( in_the_loop() ) : ?>
+                <figure2 style="grid-area:1 / 3 / 3 / 4;" class="imghvr-blur">
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'normal' );
+                        }
+                     ?>
+                    <figcaption>
+                        <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                        <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                        <?php the_excerpt( ); ?>
+                    </figcaption>
+                </figure2>
             <?php endif; ?>
         </div>
     </div>                     
