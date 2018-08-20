@@ -4,7 +4,6 @@ get_header(); ?>
 <?php
     $casino_args = array(
         'category_name' => 'casino',
-        'post_type' => 'casino',
         'nopaging' => true,
         'order' => 'ASC',
         'orderby' => 'date'
