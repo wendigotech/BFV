@@ -3,6 +3,7 @@ get_header(); ?>
 
 <?php
     $casino_args = array(
+        'category_name' => 'casino',
         'post_type' => 'casino',
         'nopaging' => true,
         'order' => 'ASC',
@@ -12,7 +13,7 @@ get_header(); ?>
 <?php $casino = new WP_Query( $casino_args ); ?>
 <?php if ( $casino->have_posts() ) : ?>
     <?php while ( $casino->have_posts() ) : $casino->the_post(); ?>
-        <div id="index-wrapper-<?php the_ID(); ?>" <?php post_class( 'wrapper' ); ?>> 
+        <div id="post-<?php the_ID(); ?>" <?php post_class( 'wrapper' ); ?>> 
             <div class="grid-content container">
                 <figure style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
                     <?php
