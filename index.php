@@ -1,9 +1,18 @@
 <?php
 get_header(); ?>
 
-<div class="wrapper" id="index-wrapper"> 
-    <?php if ( have_posts() ) : ?>
-        <?php while ( have_posts() ) : the_post(); ?>
+<?php
+    $casino_args = array(
+        'post_type' => 'casino',
+        'nopaging' => true,
+        'order' => 'ASC',
+        'orderby' => 'date'
+    )
+?>
+<?php $casino = new WP_Query( $casino_args ); ?>
+<?php if ( $casino->have_posts() ) : ?>
+    <?php while ( $casino->have_posts() ) : $casino->the_post(); ?>
+        <div id="index-wrapper-<?php the_ID(); ?>" <?php post_class( 'wrapper' ); ?>> 
             <div class="grid-content container">
                 <figure style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
                     <?php
@@ -18,11 +27,12 @@ get_header(); ?>
                         <?php the_excerpt( ); ?>
                     </figcaption>
                 </figure>
-            </div>
-        <?php endwhile; ?>
-    <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-    <?php endif; ?> 
-</div>                                 
+            </div>                             
+        </div>
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+<?php endif; ?>                 
 
 <?php get_footer(); ?>
