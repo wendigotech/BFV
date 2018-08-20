@@ -189,4 +189,4 @@
                     </div>
                 <?php endif; ?> 
             </header>             
-            <div>
+            <div class="grid-content">
