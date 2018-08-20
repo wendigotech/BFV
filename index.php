@@ -4,8 +4,9 @@ get_header(); ?>
 <div class="wrapper" id="index-wrapper"> 
     <?php if ( have_posts() ) : ?>
         <div class="grid-content container">
+            <?php $item_number = 0; ?>
             <?php while ( have_posts() ) : the_post(); ?>
-                <figure style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
+                <figure style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur<?php if( $item_number == 0) echo ' grid-content'; ?>">
                     <?php
                         if ( has_post_thumbnail() ) {
                             the_post_thumbnail( 'normal' );
@@ -18,6 +19,7 @@ get_header(); ?>
                         <?php the_excerpt( ); ?>
                     </figcaption>
                 </figure>
+                <?php $item_number++; ?>
             <?php endwhile; ?>
             <figure style="grid-area:5 / 2 / 8 / 4;" class="imghvr-blur">
                 <?php
