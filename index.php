@@ -18,20 +18,20 @@ get_header(); ?>
                         <?php the_excerpt( ); ?>
                     </figcaption>
                 </figure>
+                <figure style="grid-area:7 / 1 / 5 / 3;" <?php post_class( 'grid-area:1 / 3 / 4 / 4; imghvr-blur' ); ?>>
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'normal' );
+                        }
+                     ?>
+                    <figcaption>
+                        <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="#"><?php _e( 'Play', 'st2' ); ?></a>
+                        <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="#"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                        <h6 class="text-center display-5"><?php _e( 'Heading 6', 'st2' ); ?></h6>
+                        <p class="text-center d-table float-left"><?php _e( 'Paragraph', 'st2' ); ?></p>
+                    </figcaption>
+                </figure>
             <?php endwhile; ?>
-            <figure style="grid-area:1 / 3 / 4 / 4;" <?php post_class( 'grid-area:1 / 3 / 4 / 4; imghvr-blur' ); ?>>
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="#"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="#"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php _e( 'Heading 6', 'st2' ); ?></h6>
-                    <p class="text-center d-table float-left"><?php _e( 'Paragraph', 'st2' ); ?></p>
-                </figcaption>
-            </figure>
             <figure style="grid-area:1 / 3 / 4 / 4;" <?php post_class( 'grid-area:1 / 3 / 4 / 4; imghvr-blur' ); ?>>
                 <?php
                     if ( has_post_thumbnail() ) {
