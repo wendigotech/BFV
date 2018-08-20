@@ -12,7 +12,7 @@ get_header(); ?>
         <?php if ( $casino->have_posts() ) : ?>
             <div class="row grid-content">
                 <?php while ( $casino->have_posts() ) : $casino->the_post(); ?>
-                    <figure1 style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
+                    <figure style="grid-area:2 / 1 / 5 / 3;" class="imghvr-blur">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -24,10 +24,10 @@ get_header(); ?>
                             <h6 class="text-center display-5"><?php the_title(); ?></h6>
                             <?php the_excerpt( ); ?>
                         </figcaption>
-                    </figure1>
+                    </figure>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
-                <figure2 style="grid-area:1 / 3 / 3 / 4;" class="imghvr-blur">
+                <figure style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
                     <?php
                         if ( has_post_thumbnail() ) {
                             the_post_thumbnail( 'normal' );
@@ -39,7 +39,7 @@ get_header(); ?>
                         <h6 class="text-center display-5"><?php the_title(); ?></h6>
                         <?php the_excerpt( ); ?>
                     </figcaption>
-                </figure2>
+                </figure>
             </div>
         <?php else : ?>
             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
