@@ -3,10 +3,49 @@ get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
     <div class="container">
-        <div class="row no-gutters grid-content">
-            <?php if ( have_posts() ) : ?>
+        <?php if ( have_posts() ) : ?>
+            <div <?php post_class( 'row no-gutters grid-content' ); ?> id="post-<?php the_ID(); ?>">
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <figure style="grid-area:1 / 1 / 4 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
+                        <?php
+                            if ( has_post_thumbnail() ) {
+                                the_post_thumbnail( 'normal' );
+                            }
+                         ?>
+                        <figcaption>
+                            <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                            <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                            <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                            <?php the_excerpt( ); ?>
+                        </figcaption>
+                    </figure>
+                    <figure style="grid-area:1 / 3 / 3 / 4;" class="imghvr-blur">
+                        <?php
+                            if ( has_post_thumbnail() ) {
+                                the_post_thumbnail( 'normal' );
+                            }
+                         ?>
+                        <figcaption>
+                            <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                            <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                            <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                            <?php the_excerpt( ); ?>
+                        </figcaption>
+                    </figure>
+                    <figure style="grid-area:3 / 3 / 6 / 4;" class="imghvr-blur">
+                        <?php
+                            if ( has_post_thumbnail() ) {
+                                the_post_thumbnail( 'normal' );
+                            }
+                         ?>
+                        <figcaption>
+                            <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                            <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                            <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                            <?php the_excerpt( ); ?>
+                        </figcaption>
+                    </figure>
+                    <figure style="grid-area:4 / 2 / 6 / 3;" class="imghvr-blur">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -20,101 +59,62 @@ get_header(); ?>
                         </figcaption>
                     </figure>
                 <?php endwhile; ?>
-            <?php else : ?>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-            <?php endif; ?>
-            <figure style="grid-area:1 / 3 / 3 / 4;" class="imghvr-blur">
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                    <?php the_excerpt( ); ?>
-                </figcaption>
-            </figure>
-            <figure style="grid-area:3 / 3 / 6 / 4;" class="imghvr-blur">
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                    <?php the_excerpt( ); ?>
-                </figcaption>
-            </figure>
-            <figure style="grid-area:4 / 2 / 6 / 3;" class="imghvr-blur">
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                    <?php the_excerpt( ); ?>
-                </figcaption>
-            </figure>
-            <figure style="grid-area:8 / 1 / 10 / 3;" class="imghvr-blur">
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                    <?php the_excerpt( ); ?>
-                </figcaption>
-            </figure>
-            <figure style="grid-area:6 / 2 / 8 / 4;" class="imghvr-blur">
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                    <?php the_excerpt( ); ?>
-                </figcaption>
-            </figure>
-            <figure style="grid-area:4 / 1 / 8 / 2;" class="imghvr-blur">
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                    <?php the_excerpt( ); ?>
-                </figcaption>
-            </figure>
-            <figure style="grid-area:8 / 3 / 10 / 4;" class="imghvr-blur">
-                <?php
-                    if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
-                    }
-                 ?>
-                <figcaption>
-                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                    <?php the_excerpt( ); ?>
-                </figcaption>
-            </figure>
-        </div>
+                <figure style="grid-area:8 / 1 / 10 / 3;" class="imghvr-blur">
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'normal' );
+                        }
+                     ?>
+                    <figcaption>
+                        <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                        <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                        <?php the_excerpt( ); ?>
+                    </figcaption>
+                </figure>
+                <figure style="grid-area:6 / 2 / 8 / 4;" class="imghvr-blur">
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'normal' );
+                        }
+                     ?>
+                    <figcaption>
+                        <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                        <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                        <?php the_excerpt( ); ?>
+                    </figcaption>
+                </figure>
+                <figure style="grid-area:4 / 1 / 8 / 2;" class="imghvr-blur">
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'normal' );
+                        }
+                     ?>
+                    <figcaption>
+                        <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                        <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                        <?php the_excerpt( ); ?>
+                    </figcaption>
+                </figure>
+                <figure style="grid-area:8 / 3 / 10 / 4;" class="imghvr-blur">
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'normal' );
+                        }
+                     ?>
+                    <figcaption>
+                        <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                        <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                        <?php the_excerpt( ); ?>
+                    </figcaption>
+                </figure>
+            </div>
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+        <?php endif; ?>
     </div>
     <div class="container " id="content" tabindex="-1"> 
         <div class="row"> 
