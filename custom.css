@@ -25,7 +25,7 @@
 
 .grid-content {
     display: grid;
-    grid-template-columns: 23fr 9fr 8fr;
+    grid-template-columns: 4fr 4fr 4fr;
     grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     grid-gap: 10px;
 }
