@@ -3,15 +3,9 @@ get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
     <div class="container">
-        <?php
-            $casino_args = array(
-                'category_name' => 'casino'
-            )
-         ?>
-        <?php $casino = new WP_Query( $casino_args ); ?>
-        <?php if ( $casino->have_posts() ) : ?>
-            <div <?php post_class( 'row grid-content' ); ?> id="post-<?php the_ID(); ?>">
-                <?php while ( $casino->have_posts() ) : $casino->the_post(); ?>
+        <?php if ( have_posts() ) : ?>
+            <div class="row grid-content">
+                <?php while ( have_posts() ) : the_post(); ?>
                     <figure1 style="grid-area:1 / 1 / 4 / 3;" class="imghvr-blur">
                         <?php
                             if ( has_post_thumbnail() ) {
@@ -26,7 +20,6 @@ get_header(); ?>
                         </figcaption>
                     </figure1>
                 <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
                 <figure2 style="grid-area:1 / 3 / 3 / 4;" class="imghvr-blur">
                     <?php
                         if ( has_post_thumbnail() ) {
