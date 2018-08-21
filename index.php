@@ -2,6 +2,9 @@
 get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
+    <?php
+        $casino_args = array()
+    ?>
     <?php $casino = new WP_Query( $casino_args ); ?>
     <?php if ( $casino->have_posts() ) : ?>
         <div class="grid-content container">
