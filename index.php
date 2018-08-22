@@ -1,11 +1,11 @@
 <?php
 get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
-    <div id="index-wrapper-<?php the_ID(); ?>" <?php post_class( 'wrapper grid-content' ); ?>> 
-        <div class="container" style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:100px;grid-gap:10px;">
+<div class="wrapper grid-content" id="index-wrapper"> 
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:100px;grid-gap:10px;">
+        <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
-                <figure class="imghvr-blur" style="grid-area:1 / 1 / 2 / 2;">
+                <figure style="grid-area:1 / 1 / 2 / 2;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                     <?php
                         if ( has_post_thumbnail() ) {
                             the_post_thumbnail( 'normal' );
@@ -19,10 +19,10 @@ get_header(); ?>
                     </figcaption>
                 </figure>
             <?php endwhile; ?>
-        </div>                         
-    </div>
-<?php else : ?>
-    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-<?php endif; ?>                 
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+        <?php endif; ?>
+    </div>                     
+</div>                                 
 
 <?php get_footer(); ?>
