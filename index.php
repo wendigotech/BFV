@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <div class="wrapper grid-content" id="index-wrapper"> 
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px;grid-gap:10px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px;grid-gap:10px;" class="container-fluid">
         <?php
             $casino_args = array(
                 'category_name' => 'casino',
@@ -15,7 +15,7 @@ get_header(); ?>
         <?php if ( $casino->have_posts() ) : ?>
             <?php $casino_item_number = 0; ?>
             <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                <figure style="grid-area:1 / 1 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                <figure style="grid-area:1 / 1 / 2 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                     <?php
                         if ( has_post_thumbnail() ) {
                             the_post_thumbnail( 'normal' );
@@ -36,7 +36,7 @@ get_header(); ?>
         <?php if ( $casino->have_posts() ) : ?>
             <?php $casino_item_number = 0; ?>
             <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                <figure style="grid-area:2 / 1 / 5 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                <figure style="grid-area:2 / 1 / 5 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                     <?php
                         if ( has_post_thumbnail() ) {
                             the_post_thumbnail( 'normal' );
@@ -57,7 +57,7 @@ get_header(); ?>
         <?php if ( $casino->have_posts() ) : ?>
             <?php $casino_item_number = 0; ?>
             <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                <figure style="grid-area:2 / 3 / 4 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                <figure style="grid-area:2 / 7 / 4 / 13;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                     <?php
                         if ( has_post_thumbnail() ) {
                             the_post_thumbnail( 'normal' );
