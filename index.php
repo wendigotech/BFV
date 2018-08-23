@@ -156,7 +156,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px;grid-gap:10px;" class="container grid-content">
+            <div class="container grid-content">
                 <?php
                     $casino_args = array(
                         'category_name' => 'casino',
@@ -169,7 +169,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:1 / 2 / 4 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:2 / 2 / 5 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -190,7 +190,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:4 / 2 / 8 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 2 / 9 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -211,7 +211,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:6 / 4 / 8 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:7 / 4 / 9 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -232,7 +232,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:1 / 6 / 3 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:2 / 6 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -253,7 +253,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:4 / 4 / 6 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 4 / 7 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -274,7 +274,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:3 / 6 / 6 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:4 / 6 / 7 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -295,7 +295,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab3-tab" id="tab3">
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px;grid-gap:10px;" class="container grid-content">
+            <div class="container grid-content">
                 <?php
                     $casino_args = array(
                         'category_name' => 'casino',
@@ -308,7 +308,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:1 / 2 / 4 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:2 / 2 / 5 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -329,7 +329,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:4 / 2 / 8 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 2 / 9 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -350,7 +350,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:6 / 4 / 8 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:7 / 4 / 9 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -371,7 +371,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:1 / 6 / 3 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:2 / 6 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -392,7 +392,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:4 / 4 / 6 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 4 / 7 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -413,7 +413,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:3 / 6 / 6 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:4 / 6 / 7 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
