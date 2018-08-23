@@ -297,17 +297,17 @@ get_header(); ?>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab3-tab" id="tab3">
             <div class="container grid-content">
                 <?php
-                    $casino_args = array(
-                        'category_name' => 'casino',
+                    $Bingo_args = array(
+                        'category_name' => 'bingo',
                         'nopaging' => true,
                         'order' => 'ASC',
                         'orderby' => 'date'
                     )
                 ?>
-                <?php $casino = new WP_Query( $casino_args ); ?>
-                <?php if ( $casino->have_posts() ) : ?>
-                    <?php $casino_item_number = 0; ?>
-                    <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
+                <?php $Bingo = new WP_Query( $Bingo_args ); ?>
+                <?php if ( $Bingo->have_posts() ) : ?>
+                    <?php $Bingo_item_number = 0; ?>
+                    <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
                         <figure style="grid-area:2 / 2 / 5 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -326,9 +326,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $casino->have_posts() ) : ?>
-                    <?php $casino_item_number = 0; ?>
-                    <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
+                <?php if ( $Bingo->have_posts() ) : ?>
+                    <?php $Bingo_item_number = 0; ?>
+                    <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
                         <figure style="grid-area:5 / 2 / 9 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -347,9 +347,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $casino->have_posts() ) : ?>
-                    <?php $casino_item_number = 0; ?>
-                    <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
+                <?php if ( $Bingo->have_posts() ) : ?>
+                    <?php $Bingo_item_number = 0; ?>
+                    <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
                         <figure style="grid-area:7 / 4 / 9 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -368,9 +368,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $casino->have_posts() ) : ?>
-                    <?php $casino_item_number = 0; ?>
-                    <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
+                <?php if ( $Bingo->have_posts() ) : ?>
+                    <?php $Bingo_item_number = 0; ?>
+                    <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
                         <figure style="grid-area:2 / 6 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -389,9 +389,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $casino->have_posts() ) : ?>
-                    <?php $casino_item_number = 0; ?>
-                    <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
+                <?php if ( $Bingo->have_posts() ) : ?>
+                    <?php $Bingo_item_number = 0; ?>
+                    <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
                         <figure style="grid-area:5 / 4 / 7 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -410,9 +410,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $casino->have_posts() ) : ?>
-                    <?php $casino_item_number = 0; ?>
-                    <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
+                <?php if ( $Bingo->have_posts() ) : ?>
+                    <?php $Bingo_item_number = 0; ?>
+                    <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
                         <figure style="grid-area:4 / 6 / 7 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
