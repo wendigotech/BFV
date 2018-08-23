@@ -156,7 +156,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px;grid-gap:10px;" class="container">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px;grid-gap:10px;" class="container grid-content">
                 <?php
                     $casino_args = array(
                         'category_name' => 'casino',
@@ -293,10 +293,9 @@ get_header(); ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
             </div>
-            <p><?php _e( 'Tab 2 content goes here...', 'st2' ); ?></p>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab3-tab" id="tab3">
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px;grid-gap:10px;" class="container">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px;grid-gap:10px;" class="container grid-content">
                 <?php
                     $casino_args = array(
                         'category_name' => 'casino',
@@ -433,7 +432,6 @@ get_header(); ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
             </div>
-            <p><?php _e( 'Tab 3 content goes here...', 'st2' ); ?></p>
         </div>
     </div>                     
 </div>                                 
