@@ -210,6 +210,18 @@ function st2_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
+        'default' => __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Content', 'st2' ),
+        'type' => 'textarea',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
         'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
         'sanitize_callback' => $pgwp_sanitize
     ));

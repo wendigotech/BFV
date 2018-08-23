@@ -11,13 +11,34 @@
                     </div>                     
                 </div>
             <?php endif; ?> 
-            <div class="wrapper" id="wrapper-footer"> 
+            <div class="wrapper bg-dark text-light" id="wrapper-footer">
                 <div class="container"> 
                     <div class="row"> 
+                        <div class="col-md-6">
+                            <?php if ( ! has_custom_logo() ) : ?>
+                                <div> 
+                                    <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+                                </div>
+                            <?php else : ?>
+                                <?php the_custom_logo(); ?>
+                            <?php endif; ?>                              
+                        </div>
+                        <div class="col-md-6">
+                            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                                <?php wp_nav_menu( array(
+                                        'menu' => 'primary',
+                                        'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto float-left d-flex flex-row',
+                                        'container' => '',
+                                        'depth' => '2',
+                                        'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                        'walker' => new wp_bootstrap4_navwalker()
+                                ) ); ?>
+                            <?php endif; ?>                              
+                        </div>
                         <div class="col-md-12"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
-                                    <p><?php echo get_theme_mod( 'footer_text', 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)' ); ?></p> 
+                                    <p><?php echo get_theme_mod( 'footer_text', __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ) ); ?></p> 
                                 </div>                                 
                                 <!-- .site-info -->                                 
                             </footer>                             
@@ -26,7 +47,7 @@
                         <!--col end -->                         
                     </div>                     
                 </div>                 
-                <!-- container end -->                 
+                <!-- container end -->
             </div>             
         </div>                                                      
         <?php wp_footer(); ?>
