@@ -162,6 +162,18 @@ function st2_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Content', 'st2' ),
+        'type' => 'textarea',
+        'section' => 'footer_settings'
+    ));
+
     $wp_customize->add_setting( 'show_jumbotron', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -207,18 +219,6 @@ function st2_customize_register( $wp_customize ) {
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
-
-    $wp_customize->add_setting( 'footer_text', array(
-        'type' => 'theme_mod',
-        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Content', 'st2' ),
-        'type' => 'textarea',
-        'section' => 'footer_settings'
-    ));
 
     /* Pinegrow generated Customizer Controls End */
 
