@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
-    <ul class="nav nav-pills" role="tablist"> 
+    <ul class="nav nav-pills float-none flex-row d-flex align-items-center justify-content-around" role="tablist"> 
         <li class="nav-item"> 
             <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Home', 'st2' ); ?></a> 
         </li>                         
