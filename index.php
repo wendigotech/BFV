@@ -6,14 +6,12 @@ get_header(); ?>
         <li class="nav-item align-self-center"> 
             <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
-
         <li class="nav-item align-self-center"> 
             <a class="nav-link" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Slots', 'st2' ); ?></a> 
         </li>                         
-
         <li class="nav-item align-self-center"> 
             <a class="nav-link" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
-        </li>                                                  
+        </li>                         
     </ul>
     <div class="tab-content" style="grid-area:1 / 1 / 2 / 9;">
         <div class="tab-pane active" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">

@@ -21,7 +21,7 @@
                                 </div>
                             <?php else : ?>
                                 <?php the_custom_logo(); ?>
-                            <?php endif; ?>                              
+                            <?php endif; ?> 
                         </div>
                         <div class="col-md-6">
                             <?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -33,7 +33,7 @@
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                         'walker' => new wp_bootstrap4_navwalker()
                                 ) ); ?>
-                            <?php endif; ?>                              
+                            <?php endif; ?> 
                         </div>
                         <div class="col-md-12"> 
                             <footer class="site-footer" id="colophon"> 
