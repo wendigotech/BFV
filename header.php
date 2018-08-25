@@ -51,11 +51,11 @@
                                 <h1 class="display-5" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h1> 
                                 <div id="carousel1" class="carousel slide" data-ride="carousel"> 
                                     <ol class="carousel-indicators"> 
-                                        <li data-target="#carousel1" data-slide-to="0" class="active"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="0" class="active bg-primary"></li>                                         
 
-                                        <li data-target="#carousel1" data-slide-to="1"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="1" class="bg-secondary"></li>                                         
 
-                                        <li data-target="#carousel1" data-slide-to="2"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="2" class="bg-secondary"></li>                                         
                                     </ol>                                     
 
                                     <div class="carousel-inner" style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:100px 176px;grid-gap:20px;"> 
