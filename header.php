@@ -58,246 +58,408 @@
                                         <li data-target="#carousel1" data-slide-to="2"></li>                                         
                                     </ol>                                     
 
-                                    <div class="carousel-inner" style="display:grid;grid-template-columns:2fr 1fr 3fr;grid-template-rows:100px 100px;grid-gap:20px;"> 
+                                    <div class="carousel-inner" style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:100px 176px;grid-gap:20px;"> 
                                         <div class="carousel-item active" style="grid-area:1 / 1 / 3 / 4;">                                                                                           
 
-                                            <div class="row">
-                                                <div class="col-md-3">                                                      
-
-                                                    <?php
-                                                        $tag_choice_args = array(
-                                                            'tag' => 'choice',
-                                                            'nopaging' => true,
-                                                            'order' => 'ASC',
-                                                            'orderby' => 'date'
-                                                        )
-                                                    ?>
-                                                    <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="col-md-4">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="col-md-5">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
+                                            <div class="row" style="display:grid;grid-template-columns:4fr 2fr 3fr 4fr 4fr;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                                                <?php
+                                                    $tag_choice_args = array(
+                                                        'tag' => 'choice',
+                                                        'nopaging' => true,
+                                                        'order' => 'ASC',
+                                                        'orderby' => 'date'
+                                                    )
+                                                ?>
+                                                <?php $tag_choice = new WP_Query( $tag_choice_args ); ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 3 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 5 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 1 / 3 / 2;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 4 / 3 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
                                             </div>
                                         </div>                                         
 
                                         <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;">                                                                                           
 
-                                            <div class="row">
-                                                <div class="col-md-4">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="col-md-4">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="col-md-4">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
+                                            <div class="row" style="display:grid;grid-template-columns:3fr 3fr 2fr 4fr 4fr;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 3 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 5 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 1 / 3 / 2;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 4 / 3 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
-                                        <div class="carousel-item" style="grid-area:1 / 1 / 3 / 4;">                                                                                           
+                                        <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;">                                                                                           
 
-                                            <div class="row">
-                                                <div class="col-md-4">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="col-md-4">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="col-md-4">                                                      
-
-                                                    <?php if ( $tag_choice->have_posts() ) : ?>
-                                                        <?php $tag_choice_item_number = 0; ?>
-                                                        <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                            <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <figcaption>
-                                                                    <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                                                    <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                                                    <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                                                    <?php the_excerpt( ); ?>
-                                                                </figcaption>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
-                                                    <?php else : ?>
-                                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                                    <?php endif; ?>
-                                                </div>
+                                            <div class="row" style="display:grid;grid-template-columns:3fr 3fr 2fr 4fr 4fr;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 3 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:1 / 5 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 1 / 3 / 2;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
+                                                <?php if ( $tag_choice->have_posts() ) : ?>
+                                                    <?php $tag_choice_item_number = 0; ?>
+                                                    <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
+                                                        <figure style="grid-area:2 / 4 / 3 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                            <?php
+                                                                if ( has_post_thumbnail() ) {
+                                                                    the_post_thumbnail( 'normal' );
+                                                                }
+                                                             ?>
+                                                            <figcaption>
+                                                                <a class="btn active btn-sm d-table btn-warning btn-block" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                                                <a class="btn active btn-sm btn-danger d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                                                <?php the_excerpt( ); ?>
+                                                            </figcaption>
+                                                        </figure>
+                                                    <?php endwhile; ?>
+                                                    <?php wp_reset_postdata(); ?>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
                                             </div>
                                         </div>                                                                                  
                                     </div>                                     
