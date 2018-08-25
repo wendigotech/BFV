@@ -131,7 +131,7 @@
                                                 <?php if ( $tag_choice->have_posts() ) : ?>
                                                     <?php $tag_choice_item_number = 0; ?>
                                                     <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                        <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                        <figure style="grid-area:2 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                                             <?php
                                                                 if ( has_post_thumbnail() ) {
                                                                     the_post_thumbnail( 'normal' );
@@ -152,7 +152,7 @@
                                                 <?php if ( $tag_choice->have_posts() ) : ?>
                                                     <?php $tag_choice_item_number = 0; ?>
                                                     <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                                        <figure style="grid-area:2 / 4 / 3 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                                        <figure style="grid-area:2 / 3 / 3 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                                             <?php
                                                                 if ( has_post_thumbnail() ) {
                                                                     the_post_thumbnail( 'normal' );
