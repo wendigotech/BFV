@@ -49,3 +49,7 @@ h1.navbar-brand > a {
     font-size: $lead-font-size;
     font-weight: $lead-font-weight;
 }
+
+.active {
+    background-color: $carousel-indicator-active-bg;
+}

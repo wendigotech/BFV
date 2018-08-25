@@ -9185,7 +9185,7 @@ button.close {
     margin-left: 3px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #5e3232;
+    background-color: #4fcce8;
 }
 
 .carousel-indicators li::before {
@@ -13161,4 +13161,8 @@ h1.navbar-brand > a {
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
+}
+
+.active {
+    background-color: #fff;
 }

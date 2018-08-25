@@ -53,11 +53,11 @@
                                     <a class="carousel-control-prev bg-primary position-relative float-left mb-2" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
                                     <a class="carousel-control-next bg-primary position-relative float-right mb-2" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a>
                                     <ol class="carousel-indicators"> 
-                                        <li data-target="#carousel1" data-slide-to="0" class="active bg-secondary"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="0" class="active"></li>                                         
 
-                                        <li data-target="#carousel1" data-slide-to="1" class="bg-secondary"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="1"></li>                                         
 
-                                        <li data-target="#carousel1" data-slide-to="2" class="bg-secondary"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="2"></li>                                         
                                     </ol>                                     
 
                                     <div class="carousel-inner" style="display:grid;grid-template-columns:4fr 1fr 7fr;grid-template-rows:100px 176px;grid-gap:20px;"> 
