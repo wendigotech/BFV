@@ -50,8 +50,8 @@
                             <div class="container"> 
                                 <h1 class="display-5" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h1> 
                                 <div id="carousel1" class="carousel slide" data-ride="carousel"> 
-                                    <a class="carousel-control-prev bg-primary position-relative float-left" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
-                                    <a class="carousel-control-next bg-primary position-relative" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a>
+                                    <a class="carousel-control-prev bg-primary position-relative float-left mb-2" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
+                                    <a class="carousel-control-next bg-primary position-relative float-right mb-2" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a>
                                     <ol class="carousel-indicators"> 
                                         <li data-target="#carousel1" data-slide-to="0" class="active bg-secondary"></li>                                         
 
