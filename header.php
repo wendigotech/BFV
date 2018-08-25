@@ -458,11 +458,11 @@
                                         </div>                                                                                  
                                     </div>
                                     <ol class="carousel-indicators position-relative mt-4"> 
-                                        <li data-target="#carousel1" data-slide-to="0" class="active"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="0" class="active border-dark border"></li>                                         
 
-                                        <li data-target="#carousel1" data-slide-to="1"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="1" class="border-dark border"></li>                                         
 
-                                        <li data-target="#carousel1" data-slide-to="2"></li>                                         
+                                        <li data-target="#carousel1" data-slide-to="2" class="border-dark border"></li>                                         
                                     </ol>                                                                                                               
                                 </div>
                             </div>                             
