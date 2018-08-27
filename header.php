@@ -46,7 +46,7 @@
                 </div>                 
                 <?php if ( get_theme_mod( 'show_jumbotron' ) ) : ?>
                     <div> 
-                        <div class="jumbotron" style="background-color:<?php echo get_theme_mod( 'jumbotron_bg_color' ); ?>;background-image:<?php echo 'url('.wp_get_attachment_image_url( get_theme_mod( 'jumbotron_bg_image' ), 'full' ).')' ?>;">                              
+                        <div class="jumbotron" style="background-color:<?php echo get_theme_mod( 'jumbotron_bg_color' ); ?>;background-image:<?php echo 'url('.wp_get_attachment_image_url( get_theme_mod( 'jumbotron_bg_image' ), 'full' ).')' ?>;"> 
 </div>                         
                     </div>
                 <?php endif; ?> 
