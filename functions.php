@@ -162,18 +162,6 @@ function st2_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
-    $wp_customize->add_setting( 'footer_text', array(
-        'type' => 'theme_mod',
-        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Content', 'st2' ),
-        'type' => 'textarea',
-        'section' => 'footer_settings'
-    ));
-
     $wp_customize->add_setting( 'show_jumbotron', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -232,6 +220,18 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'footer_settings'
     ));
 
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Content', 'st2' ),
+        'type' => 'textarea',
+        'section' => 'footer_settings'
+    ));
+
     /* Pinegrow generated Customizer Controls End */
 
 }
@@ -270,6 +270,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'imagehover' );
     wp_enqueue_style( 'imagehover', 'https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/1.0/css/imagehover.min.css', false, null, 'all');
+
+    wp_deregister_style( 'hovermin' );
+    wp_enqueue_style( 'hovermin', 'https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
