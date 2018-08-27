@@ -4,7 +4,7 @@ get_header(); ?>
 <div class="wrapper grid-content" id="index-wrapper">
     <div class="container" style="grid-area:1 / 1 / 6 / 9;"> 
         <h1 class="display-5" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h1> 
-        <div id="carousel1" class="carousel slide" data-ride="carousel"> 
+        <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3s"> 
             <a class="carousel-control-prev bg-primary position-relative float-left mb-2" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
             <a class="carousel-control-next bg-primary position-relative float-right mb-2" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
             <div class="carousel-inner" style="grid-gap: 10px;"> 
@@ -148,11 +148,11 @@ get_header(); ?>
                     </div>
                 </div>                                 
                 <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;"> 
-                    <div class="row" style="display:grid;grid-template-columns:3fr 3fr 2fr 4fr 4fr;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                    <div class="row" style="display:grid;grid-template-columns:13px 3fr 3fr 3fr 2fr 4fr 13px;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 2 / 2 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -173,7 +173,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 3 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 4 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -194,7 +194,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 5 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 6 / 2 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -215,7 +215,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 1 / 3 / 2;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -236,7 +236,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 3 / 3 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -257,7 +257,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 4 / 3 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 5 / 3 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -278,11 +278,11 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;"> 
-                    <div class="row" style="display:grid;grid-template-columns:3fr 3fr 2fr 4fr 4fr;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                    <div class="row" style="display:grid;grid-template-columns:13px 4fr 2fr 3fr 2fr 4fr 13px;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 1 / 2 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 2 / 2 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -303,7 +303,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 3 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 4 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -324,7 +324,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 5 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 6 / 2 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -345,7 +345,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 1 / 3 / 2;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -366,7 +366,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 3 / 3 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -387,7 +387,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 4 / 3 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 5 / 3 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
