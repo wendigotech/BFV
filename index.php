@@ -4,7 +4,7 @@ get_header(); ?>
 <div class="wrapper grid-content" id="index-wrapper">
     <div class="container" style="grid-area:1 / 1 / 6 / 9;"> 
         <h1 class="display-5" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h1> 
-        <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3s"> 
+        <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3000"> 
             <a class="carousel-control-prev bg-primary position-relative float-left mb-2" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
             <a class="carousel-control-next bg-primary position-relative float-right mb-2" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
             <div class="carousel-inner" style="grid-gap: 10px;"> 
