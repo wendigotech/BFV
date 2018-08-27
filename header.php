@@ -53,8 +53,7 @@
                                     <a class="carousel-control-prev bg-primary position-relative float-left mb-2" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
                                     <a class="carousel-control-next bg-primary position-relative float-right mb-2" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
                                     <div class="carousel-inner" style="grid-gap: 10px;"> 
-                                        <div class="carousel-item active" style="grid-area:1 / 1 / 3 / 4;">                                                                                           
-
+                                        <div class="carousel-item active" style="grid-area:1 / 1 / 3 / 4;"> 
                                             <div class="row" style="display:grid;grid-template-columns:13px 2fr 1fr 2fr 2fr 2fr 13px;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
                                                 <?php
                                                     $tag_choice_args = array(
@@ -193,9 +192,7 @@
                                                 <?php endif; ?>
                                             </div>
                                         </div>                                         
-
-                                        <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;">                                                                                           
-
+                                        <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;"> 
                                             <div class="row" style="display:grid;grid-template-columns:3fr 3fr 2fr 4fr 4fr;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
                                                 <?php if ( $tag_choice->have_posts() ) : ?>
                                                     <?php $tag_choice_item_number = 0; ?>
@@ -325,8 +322,7 @@
                                                 <?php endif; ?>
                                             </div>
                                         </div>
-                                        <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;">                                                                                           
-
+                                        <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;"> 
                                             <div class="row" style="display:grid;grid-template-columns:3fr 3fr 2fr 4fr 4fr;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
                                                 <?php if ( $tag_choice->have_posts() ) : ?>
                                                     <?php $tag_choice_item_number = 0; ?>
@@ -455,15 +451,13 @@
                                                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                                                 <?php endif; ?>
                                             </div>
-                                        </div>                                                                                  
+                                        </div>                                         
                                     </div>
                                     <ol class="carousel-indicators position-relative mt-4"> 
                                         <li data-target="#carousel1" data-slide-to="0" class="active border border-primary"></li>                                         
-
                                         <li data-target="#carousel1" data-slide-to="1" class="border border-primary"></li>                                         
-
                                         <li data-target="#carousel1" data-slide-to="2" class="border border-primary"></li>                                         
-                                    </ol>                                                                                                               
+                                    </ol>                                     
                                 </div>
                             </div>                             
                         </div>                         
