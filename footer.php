@@ -24,9 +24,9 @@
                             <?php endif; ?> 
                         </div>
                         <div class="col-md-6">
-                            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                            <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
-                                        'menu' => 'primary',
+                                        'menu' => 'social',
                                         'menu_class' => 'navbar-nav mt-2 float-left flex-row d-flex ml-auto ',
                                         'container' => '',
                                         'depth' => '2',
