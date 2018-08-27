@@ -415,7 +415,7 @@ get_header(); ?>
             </ol>                             
         </div>
     </div>                     
-    <ul class="nav nav-pills" role="tablist" style="grid-area:4 / 2 / 5 / 8;"> 
+    <ul class="nav nav-pills" role="tablist" style="grid-area:4 / 3 / 5 / 7;"> 
         <li class="nav-item align-self-center"> 
             <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
