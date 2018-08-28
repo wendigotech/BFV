@@ -9,7 +9,7 @@ get_header(); ?>
             <a class="carousel-control-next bg-primary position-relative float-right mb-2" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
             <div class="carousel-inner" style="grid-gap: 10px;"> 
                 <div class="carousel-item active" style="grid-area:1 / 1 / 3 / 4;"> 
-                    <div class="row" style="display:grid;grid-template-columns:13px 2fr 1fr 2fr 2fr 2fr 13px;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                    <div class="row" style="display: grid; grid-template-columns: 13px 2fr 1fr 2fr 2fr 2fr 13px; grid-template-rows: none none; grid-auto-rows: 160px; grid-gap: 10px;">
                         <?php
                             $tag_choice_args = array(
                                 'tag' => 'choice',
@@ -148,7 +148,7 @@ get_header(); ?>
                     </div>
                 </div>                                 
                 <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;"> 
-                    <div class="row" style="display:grid;grid-template-columns:13px 3fr 3fr 3fr 2fr 4fr 13px;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                    <div class="row" style="display: grid; grid-template-columns: 13px 3fr 3fr 3fr 2fr 4fr 13px; grid-template-rows: none none; grid-auto-rows: 160px; grid-gap: 10px;">
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
@@ -278,7 +278,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="carousel-item" style="grid-area:1 / 1 / 2 / 4;"> 
-                    <div class="row" style="display:grid;grid-template-columns:13px 4fr 2fr 3fr 2fr 4fr 13px;grid-template-rows:none none;grid-auto-rows:120px;grid-gap:10px;">
+                    <div class="row" style="display: grid; grid-template-columns: 13px 4fr 2fr 3fr 2fr 4fr 13px; grid-template-rows: none none; grid-auto-rows: 160px; grid-gap: 10px;">
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
@@ -415,7 +415,7 @@ get_header(); ?>
             </ol>                             
         </div>
     </div>                     
-    <ul class="nav nav-pills" role="tablist" style="grid-area:4 / 3 / 5 / 7;"> 
+    <ul class="nav nav-pills" role="tablist" style="grid-area:5 / 3 / 6 / 7;"> 
         <li class="nav-item align-self-center"> 
             <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
@@ -426,7 +426,7 @@ get_header(); ?>
             <a class="nav-link" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
         </li>                         
     </ul>
-    <div class="tab-content" style="grid-area:4 / 1 / 12 / 9;">
+    <div class="tab-content" style="grid-area:5 / 1 / 14 / 9;">
         <div class="tab-pane active" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
             <div class="container grid-content">
                 <?php
