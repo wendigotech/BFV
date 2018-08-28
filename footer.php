@@ -27,7 +27,7 @@
                             <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'social',
-                                        'menu_class' => 'navbar-nav mt-2 float-left flex-row d-flex ml-auto ',
+                                        'menu_class' => 'navbar-nav mt-2 float-left ml-auto flex-row',
                                         'container' => '',
                                         'depth' => '2',
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
@@ -43,18 +43,6 @@
                                 <!-- .site-info -->                                 
                             </footer>                             
                             <!-- #colophon -->                             
-                        </div>
-                        <div class="col-md-4">
-                            <?php if ( has_nav_menu( 'etc' ) ) : ?>
-                                <?php wp_nav_menu( array(
-                                        'menu' => 'etc',
-                                        'menu_class' => 'navbar-nav mt-2 float-left flex-row d-flex ml-auto ',
-                                        'container' => '',
-                                        'depth' => '2',
-                                        'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                        'walker' => new wp_bootstrap4_navwalker()
-                                ) ); ?>
-                            <?php endif; ?> 
                         </div>                         
                         <!--col end -->                         
                     </div>                     
