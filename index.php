@@ -448,8 +448,12 @@ get_header(); ?>
                                 }
                              ?>
                             <figcaption>
-                                <a class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top d-table" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                <a class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" data-html="false"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                <button class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" type="button" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                    <?php _e( 'Play', 'st2' ); ?>
+                                </button>
+                                <button class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="false" type="button" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>">
+                                    <?php _e( 'T&C´s', 'st2' ); ?>
+                                </button>
                                 <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                 <?php the_excerpt( ); ?>
                             </figcaption>
