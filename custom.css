@@ -67,9 +67,14 @@ figure {
 figcaption h6 {
     font-size: 1vw;
     text-align: center;
+    padding-top: 5px;
 }
 
 figcaption p {
     font-size: 1vw;
     text-align: center;
+}
+
+figcaption .btn-danger {
+    display: table;
 }
