@@ -44,7 +44,7 @@
                             </footer>                             
                             <!-- #colophon -->                             
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-md-4">
                             <?php if ( has_nav_menu( 'etc' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'etc',
