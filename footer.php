@@ -35,7 +35,7 @@
                                 ) ); ?>
                             <?php endif; ?> 
                         </div>
-                        <div class="col-md-12"> 
+                        <div class="col-md-8"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
                                     <p><?php echo get_theme_mod( 'footer_text', __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ) ); ?></p> 
@@ -43,6 +43,18 @@
                                 <!-- .site-info -->                                 
                             </footer>                             
                             <!-- #colophon -->                             
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <?php if ( has_nav_menu( 'etc' ) ) : ?>
+                                <?php wp_nav_menu( array(
+                                        'menu' => 'etc',
+                                        'menu_class' => 'navbar-nav mt-2 float-left flex-row d-flex ml-auto ',
+                                        'container' => '',
+                                        'depth' => '2',
+                                        'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                        'walker' => new wp_bootstrap4_navwalker()
+                                ) ); ?>
+                            <?php endif; ?> 
                         </div>                         
                         <!--col end -->                         
                     </div>                     
