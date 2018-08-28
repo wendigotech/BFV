@@ -35,7 +35,7 @@
                                 ) ); ?>
                             <?php endif; ?> 
                         </div>
-                        <div class="col-md-8"> 
+                        <div class="col-md-12"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
                                     <p><?php echo get_theme_mod( 'footer_text', __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ) ); ?></p> 
