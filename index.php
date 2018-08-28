@@ -448,9 +448,9 @@ get_header(); ?>
                                 }
                              ?>
                             <figcaption>
-                                <a class="btn active btn-sm d-table btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                <a class="btn active btn-sm btn-danger d-table hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" data-html="false" data-toggle="tooltip" data-placement="bottom" title="avhjm"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                <h6 class="text-center display-5"><?php the_title(); ?></h6>
+                                <a class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top d-table p-2 pt-2 pr-null pl-null pb-2 " role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                <a class="btn active btn-sm btn-danger hvr-sweep-to-left d-table p-2" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" data-html="false" data-toggle="tooltip" data-placement="bottom" title="avhjm"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                <h6 class="text-center display-5 mt-3"><?php the_title(); ?></h6>
                                 <?php the_excerpt( ); ?>
                             </figcaption>
                         </figure>
