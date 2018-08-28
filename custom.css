@@ -64,10 +64,10 @@ figure {
     box-shadow: 1px 1px 5px #000000;
 }
 
-p.text-center.d-table.float-left {
+figcaption h6 {
     font-size: 2vw;
 }
 
-figcaption h6 {
+figcaption p {
     font-size: 2vw;
 }
