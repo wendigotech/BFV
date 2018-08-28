@@ -74,7 +74,3 @@ figcaption p {
     font-size: 1vw;
     text-align: center;
 }
-
-figcaption .btn-danger {
-    display: table;
-}
