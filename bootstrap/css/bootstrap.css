@@ -13184,9 +13184,9 @@ h1.navbar-brand > a {
     margin-right: 15%;
     margin-left: 15%;
     list-style: none;
-    -webkit-transform: scale(3);
-    -ms-transform: scale(3);
-    transform: scale(3);
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
 }
 
 .carousel-indicators li {
