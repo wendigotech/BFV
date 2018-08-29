@@ -420,7 +420,7 @@ get_header(); ?>
             <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
         <li class="nav-item align-self-center"> 
-            <a class="nav-link" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Slots', 'st2' ); ?></a> 
+            <a class="nav-link" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
         </li>                         
         <li class="nav-item align-self-center"> 
             <a class="nav-link" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
@@ -573,17 +573,17 @@ get_header(); ?>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
             <div class="container grid-content">
                 <?php
-                    $Slots_args = array(
-                        'category_name' => 'slots',
+                    $Sports_args = array(
+                        'category_name' => 'sports',
                         'nopaging' => true,
                         'order' => 'ASC',
                         'orderby' => 'date'
                     )
                 ?>
-                <?php $Slots = new WP_Query( $Slots_args ); ?>
-                <?php if ( $Slots->have_posts() ) : ?>
-                    <?php $Slots_item_number = 0; ?>
-                    <?php while ( $Slots->have_posts() && $Slots_item_number++ < 1 ) : $Slots->the_post(); ?>
+                <?php $Sports = new WP_Query( $Sports_args ); ?>
+                <?php if ( $Sports->have_posts() ) : ?>
+                    <?php $Sports_item_number = 0; ?>
+                    <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
                         <figure style="grid-area:2 / 2 / 5 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -602,9 +602,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $Slots->have_posts() ) : ?>
-                    <?php $Slots_item_number = 0; ?>
-                    <?php while ( $Slots->have_posts() && $Slots_item_number++ < 1 ) : $Slots->the_post(); ?>
+                <?php if ( $Sports->have_posts() ) : ?>
+                    <?php $Sports_item_number = 0; ?>
+                    <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
                         <figure style="grid-area:5 / 2 / 9 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -623,9 +623,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $Slots->have_posts() ) : ?>
-                    <?php $Slots_item_number = 0; ?>
-                    <?php while ( $Slots->have_posts() && $Slots_item_number++ < 1 ) : $Slots->the_post(); ?>
+                <?php if ( $Sports->have_posts() ) : ?>
+                    <?php $Sports_item_number = 0; ?>
+                    <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
                         <figure style="grid-area:7 / 4 / 9 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -644,9 +644,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $Slots->have_posts() ) : ?>
-                    <?php $Slots_item_number = 0; ?>
-                    <?php while ( $Slots->have_posts() && $Slots_item_number++ < 1 ) : $Slots->the_post(); ?>
+                <?php if ( $Sports->have_posts() ) : ?>
+                    <?php $Sports_item_number = 0; ?>
+                    <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
                         <figure style="grid-area:2 / 6 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -665,9 +665,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $Slots->have_posts() ) : ?>
-                    <?php $Slots_item_number = 0; ?>
-                    <?php while ( $Slots->have_posts() && $Slots_item_number++ < 1 ) : $Slots->the_post(); ?>
+                <?php if ( $Sports->have_posts() ) : ?>
+                    <?php $Sports_item_number = 0; ?>
+                    <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
                         <figure style="grid-area:5 / 4 / 7 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
@@ -686,9 +686,9 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <?php if ( $Slots->have_posts() ) : ?>
-                    <?php $Slots_item_number = 0; ?>
-                    <?php while ( $Slots->have_posts() && $Slots_item_number++ < 1 ) : $Slots->the_post(); ?>
+                <?php if ( $Sports->have_posts() ) : ?>
+                    <?php $Sports_item_number = 0; ?>
+                    <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
                         <figure style="grid-area:4 / 6 / 7 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
