@@ -18,7 +18,7 @@
                 </header>                 
                 <?php
                     if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'normal' );
+                        the_post_thumbnail( 'large' );
                     }
                  ?> 
                 <div class="entry-content"> 
