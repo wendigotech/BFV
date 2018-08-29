@@ -108,3 +108,15 @@ h1.navbar-brand > a {
 
     transform: scale(2);
 }
+
+h1,
+.h1 {
+    font-size: $h1-font-size;
+    font-family: Abel;
+}
+
+h2,
+.h2 {
+    font-size: $h2-font-size;
+    font-family: Abel;
+}

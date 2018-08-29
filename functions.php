@@ -90,36 +90,6 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Hero Slider', 'st2' ),
-        'id' => 'hero',
-        'description' => 'Hero slider area. Place two or more widgets here and they will slide!',
-        'before_widget' => '<div class="carousel-item">',
-        'after_widget' => '</div>',
-        'before_title' => ' ',
-        'after_title' => ' '
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Hero Canvas', 'st2' ),
-        'id' => 'herocanvas',
-        'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => ''
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Top Full', 'st2' ),
-        'id' => 'statichero',
-        'description' => 'Full top widget with dynamic grid',
-        'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'">',
-        'after_widget' => '</div><!-- .static-hero-widget -->',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Bottom Full', 'st2' ),
         'id' => 'footerfull',
         'description' => 'Full bottom widget with dynamic grid',
@@ -161,41 +131,6 @@ function st2_customize_register( $wp_customize ) {
         'priority' => '0'
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
-
-    $wp_customize->add_setting( 'show_jumbotron', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_jumbotron', array(
-        'label' => __( 'Show Jumbotron', 'st2' ),
-        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'st2' ),
-        'type' => 'checkbox',
-        'section' => 'header_settings'
-    ));
-
-    $wp_customize->add_setting( 'jumbotron_bg_color', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_bg_color', array(
-        'label' => __( 'Jumbotron Background color', 'st2' ),
-        'type' => 'color',
-        'section' => 'header_settings'
-    ) ) );
-
-    $wp_customize->add_setting( 'jumbotron_bg_image', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'jumbotron_bg_image', array(
-        'label' => __( 'Jumbotron Background image', 'st2' ),
-        'type' => 'media',
-        'mime_type' => 'image',
-        'section' => 'header_settings'
-    ) ) );
 
     $wp_customize->add_setting( 'jumbotron_heading_color', array(
         'type' => 'theme_mod',
@@ -256,8 +191,14 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Styles Begin */
 
+    wp_deregister_style( 'style' );
+    wp_enqueue_style( 'style', get_bloginfo('stylesheet_url'), false, null, 'all');
+
     wp_deregister_style( 'bootstrap' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', false, null, 'all');
+
+    wp_deregister_style( 'custom' );
+    wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
 
     wp_deregister_style( 'theme' );
     wp_enqueue_style( 'theme', get_template_directory_uri() . '/css/theme.css', false, null, 'all');
@@ -265,14 +206,14 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
 
-    wp_deregister_style( 'custom' );
-    wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
-
     wp_deregister_style( 'imagehover' );
     wp_enqueue_style( 'imagehover', 'https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/1.0/css/imagehover.min.css', false, null, 'all');
 
     wp_deregister_style( 'hovermin' );
     wp_enqueue_style( 'hovermin', 'https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css', false, null, 'all');
+
+    wp_deregister_style( 'style-1' );
+    wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Abel', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
