@@ -447,16 +447,18 @@ get_header(); ?>
                                     the_post_thumbnail( 'normal' );
                                 }
                              ?>
-                            <figcaption href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
-                                <button class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" type="button" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
-                                    <?php _e( 'Play', 'st2' ); ?>
-                                </button>
-                                <button class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="false" type="button" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>">
-                                    <?php _e( 'T&C´s', 'st2' ); ?>
-                                </button>
-                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
-                                <?php the_excerpt( ); ?>
-                            </figcaption>
+                            <a href="">
+                                <figcaption href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                    <button class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" type="button" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                        <?php _e( 'Play', 'st2' ); ?>
+                                    </button>
+                                    <button class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="false" type="button" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>">
+                                        <?php _e( 'T&C´s', 'st2' ); ?>
+                                    </button>
+                                    <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                    <?php the_excerpt( ); ?>
+                                </figcaption>
+                            </a>
                         </figure>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
