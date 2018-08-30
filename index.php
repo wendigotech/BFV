@@ -452,7 +452,7 @@ get_header(); ?>
                                     <button class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" type="button" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                         <?php _e( 'Play', 'st2' ); ?>
                                     </button>
-                                    <button class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="true" type="button" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" data-placement="bottom" data-trigger="hover" data-toggle="popover" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>">
+                                    <button class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="true" type="button" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" data-placement="bottom" data-trigger="hover" data-toggle="tooltip" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>">
                                         <?php _e( 'T&C´s', 'st2' ); ?>
                                     </button>
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
