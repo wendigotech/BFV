@@ -447,8 +447,8 @@ get_header(); ?>
                                     the_post_thumbnail( 'normal' );
                                 }
                              ?>
-                            <a href="">
-                                <figcaption href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                            <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                <figcaption>
                                     <button class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" type="button" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                         <?php _e( 'Play', 'st2' ); ?>
                                     </button>
