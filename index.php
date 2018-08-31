@@ -450,7 +450,7 @@ get_header(); ?>
                             <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                 <figcaption>
                                     <a class="btn active btn-sm btn-warning hvr-sweep-to-top" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                    <a class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="false" data-toggle="tooltip" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="123" data-placement="bottom" data-trigger="hover"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                    <a class="btn active btn-sm btn-danger hvr-sweep-to-left bs-tooltip-bottom" role="button" aria-pressed="true" data-html="false" data-toggle="tooltip" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="123" data-placement="bottom" data-trigger="hover"><?php _e( 'T&C´s', 'st2' ); ?></a>
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                     <?php the_excerpt( ); ?>
                                 </figcaption>
