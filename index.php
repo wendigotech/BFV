@@ -451,7 +451,6 @@ get_header(); ?>
                                 <figcaption>
                                     <a class="btn active btn-sm btn-warning hvr-sweep-to-top" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
                                     <a class="btn active btn-sm btn-danger hvr-sweep-to-left hint--bottom" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                    <span class="hint--bottom" aria-label="Thank you!"><?php _e( 'hover over me.', 'st2' ); ?></span>
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                     <?php the_excerpt( ); ?>
                                 </figcaption>
