@@ -416,7 +416,7 @@ get_header(); ?>
         </div>
     </div>                     
     <ul class="nav nav-pills" role="tablist" style="grid-area:6 / 3 / 7 / 8;"> 
-        <li class="nav-item align-self-center"> 
+        <li class="nav-item align-self-center" data-toggle="tooltip" title="aa" data-placement="top" data-trigger="hover"> 
             <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
         <li class="nav-item align-self-center"> 
@@ -450,7 +450,7 @@ get_header(); ?>
                             <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                 <figcaption>
                                     <a class="btn active btn-sm btn-warning hvr-sweep-to-top" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                    <a class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" data-toggle="tooltip" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" data-placement="bottom" data-trigger="hover"><?php _e( 'T&C´s', 'st2' ); ?></a>
+                                    <a class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                     <?php the_excerpt( ); ?>
                                 </figcaption>
