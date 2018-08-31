@@ -3,7 +3,7 @@ get_header(); ?>
 
 <div class="wrapper grid-content" id="index-wrapper">
     <div class="container" style="grid-area:1 / 2 / 6 / 8;"> 
-        <h2 class="text-center" data-toggle="tooltip" title="a" data-placement="top" data-trigger="hover" data-html="true" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h2> 
+        <h2 class="text-center" data-html="false" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h2> 
         <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3000"> 
             <a class="carousel-control-prev bg-primary position-relative float-left mb-2" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
             <a class="carousel-control-next bg-primary position-relative float-right mb-2" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
@@ -449,12 +449,8 @@ get_header(); ?>
                              ?>
                             <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                 <figcaption>
-                                    <button class="btn active btn-sm btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" type="button" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
-                                        <?php _e( 'Play', 'st2' ); ?>
-                                    </button>
-                                    <button class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="true" type="button" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" data-placement="bottom" data-trigger="hover" data-toggle="tooltip" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>">
-                                        <?php _e( 'T&C´s', 'st2' ); ?>
-                                    </button>
+                                    <a class="btn active btn-sm btn-warning hvr-sweep-to-top" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                    <a class="btn active btn-sm btn-danger hvr-sweep-to-left" role="button" aria-pressed="true" data-html="false" data-toggle="tooltip" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                     <?php the_excerpt( ); ?>
                                 </figcaption>

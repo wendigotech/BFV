@@ -74,3 +74,13 @@ figcaption p {
     font-size: 1vw;
     text-align: center;
 }
+
+[class*=' imghvr-'] a,
+[class^=imghvr-] a {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: relative;
+}

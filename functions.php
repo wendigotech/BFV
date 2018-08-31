@@ -199,9 +199,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'bootstrap' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', false, null, 'all');
 
-    wp_deregister_style( 'custom' );
-    wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
-
     wp_deregister_style( 'theme' );
     wp_enqueue_style( 'theme', get_template_directory_uri() . '/css/theme.css', false, null, 'all');
 
@@ -213,6 +210,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'hovermin' );
     wp_enqueue_style( 'hovermin', 'https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css', false, null, 'all');
+
+    wp_deregister_style( 'custom' );
+    wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
 
     wp_deregister_style( 'style-1' );
     wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Abel', false, null, 'all');
