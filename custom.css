@@ -114,6 +114,10 @@ figcaption p {
     color: #fff;
 }
 
-div#index-wrapper {
-    background: linear-gradient(90deg, #ACE6F2, #5fc9da, #89cff0);
+body {
+    background: linear-gradient(116deg, rgb(251, 252, 253) 15.9763%, #5fc9da 69.2308%);
+}
+
+div#wrapper-footer {
+    background-color: #5b7485;
 }

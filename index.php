@@ -450,14 +450,12 @@ get_header(); ?>
                             <a href="">
                                 <?php _e( 'Link', 'st2' ); ?>
                                 <figcaption>
-                                    <div class="row pg-empty-placeholder">
+                                    <div class="row">
                                         <div class="col-md-12">                                                              
 
                                             <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                             <?php the_excerpt( ); ?>
                                         </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-md-6">
                                             <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
                                         </div>

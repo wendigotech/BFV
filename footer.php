@@ -11,13 +11,13 @@
                     </div>                     
                 </div>
             <?php endif; ?> 
-            <div class="wrapper bg-dark text-light" id="wrapper-footer">
+            <div class="wrapper text-light" id="wrapper-footer">
                 <div class="container"> 
                     <div class="row"> 
                         <div class="col-md-6">
                             <?php if ( ! has_custom_logo() ) : ?>
                                 <div> 
-                                    <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+                                    <a rel="home" class="navbar-brand text-light" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                                 </div>
                             <?php else : ?>
                                 <?php the_custom_logo(); ?>
