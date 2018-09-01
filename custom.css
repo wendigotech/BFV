@@ -77,8 +77,8 @@ figcaption p {
     color: #fdfdfd;
 }
 
-[class*=' imghvr-'] a,
-[class^=imghvr-] a {
+[class*=' imghvr-'] a.btn,
+[class^=imghvr-] a.btn {
     top: 0;
     bottom: 0;
     left: 0;
@@ -87,4 +87,33 @@ figcaption p {
     position: relative;
     align-self: center;
     border-radius: 10px;
+}
+
+[class*=' imghvr-'] a,
+[class^=imghvr-] a {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    align-self: center;
+    border-radius: 10px;
+    color: rgba(227, 27, 27, 0);
+}
+
+[class*=' imghvr-'] figcaption,
+[class^=imghvr-] figcaption {
+    background-color: #5FC9DA;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+
+div#index-wrapper {
+    background: linear-gradient(90deg, #ACE6F2, #5fc9da, #89cff0);
 }
