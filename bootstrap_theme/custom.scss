@@ -149,3 +149,34 @@ p {
     word-break: break-word;
     font-size: 1vw;
 }
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: $pagination-padding-y $pagination-padding-x;
+    margin-left: -$pagination-border-width;
+    line-height: $pagination-line-height;
+    color: $pagination-color;
+    border: $pagination-border-width solid $pagination-border-color;
+
+    &:hover {
+        z-index: 2;
+        color: $pagination-hover-color;
+        text-decoration: none;
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border-color;
+    }
+
+    &:focus {
+        z-index: 2;
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+    }
+
+    // Opinionated: add "hand" cursor to non-disabled .page-link elements
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    background: -webkit-repeating-radial-gradient(right center, rgb(172, 182, 229) 0%, rgb(134, 253, 232) 100%);
+}

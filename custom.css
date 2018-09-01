@@ -73,6 +73,8 @@ figcaption h6 {
 figcaption p {
     font-size: 1vw;
     text-align: center;
+    font-family: Abhaya Libre;
+    color: #fdfdfd;
 }
 
 [class*=' imghvr-'] a,
@@ -83,4 +85,5 @@ figcaption p {
     right: 0;
     z-index: 1;
     position: relative;
+    align-self: center;
 }
