@@ -111,11 +111,11 @@ figcaption p {
     left: 0;
     right: 0;
     color: #fff;
-    background: linear-gradient(224deg, rgb(172, 230, 242) 28.5917%, rgb(95, 201, 218) 72.7574%);
+    background: #89cff0;
 }
 
 body {
-    background: linear-gradient(134deg, rgb(251, 251, 251) 22.4852%, rgb(137, 207, 240) 72.7811%);
+    background: linear-gradient(176deg, rgb(255, 255, 255) 21.8935%, rgb(187, 201, 223) 49.1124%, rgb(95, 201, 218) 72.7811%);
 }
 
 div#wrapper-footer {
@@ -154,7 +154,7 @@ a.nav-link.footer {
 a.nav-link.pills {
     font-family: Anaheim;
     font-weight: 600;
-    color: #5b7485;
+    color: #f0f7fb;
     background-color: #5fc9da;
 }
 
