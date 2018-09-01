@@ -5,8 +5,8 @@ get_header(); ?>
     <div class="container" style="grid-area:1 / 2 / 6 / 8;"> 
         <h2 class="text-center" data-html="false" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h2> 
         <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3000"> 
-            <a class="carousel-control-prev position-relative float-left mb-2 bg-info" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
-            <a class="carousel-control-next position-relative float-right mb-2 bg-info" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
+            <a class="carousel-control-prev position-relative float-left mb-2 bg-info shadow-sm" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
+            <a class="carousel-control-next position-relative float-right mb-2 bg-info shadow-sm" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
             <div class="carousel-inner" style="grid-gap: 10px;"> 
                 <div class="carousel-item active" style="grid-area:1 / 1 / 3 / 4;"> 
                     <div class="row" style="display: grid; grid-template-columns: 13px 2fr 1fr 2fr 2fr 2fr 13px; grid-template-rows: none none; grid-auto-rows: 160px; grid-gap: 10px;">
@@ -417,13 +417,13 @@ get_header(); ?>
     </div>                     
     <ul class="nav nav-pills" role="tablist" style="grid-area:5 / 3 / 6 / 8;"> 
         <li class="nav-item align-self-center"> 
-            <a class="nav-link active pills" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
+            <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
         <li class="nav-item align-self-center"> 
-            <a class="nav-link pills" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
+            <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
         </li>                         
         <li class="nav-item align-self-center"> 
-            <a class="nav-link pills" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
+            <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
         </li>                         
     </ul>
     <div class="tab-content" style="grid-area:6 / 1 / 14 / 9;">
@@ -447,7 +447,7 @@ get_header(); ?>
                                     the_post_thumbnail( 'normal' );
                                 }
                              ?>
-                            <a href="">
+                            <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                 <?php _e( 'Link', 'st2' ); ?>
                                 <figcaption>
                                     <div class="row pg-empty-placeholder">
@@ -455,7 +455,7 @@ get_header(); ?>
                                             <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
                                         </div>
                                         <div class="col-md-6">
-                                            <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                            <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
                                         </div>
                                     </div>
                                     <div class="col-md-12"> 

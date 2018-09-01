@@ -13240,6 +13240,7 @@ h2,
 .h2 {
     font-size: 2rem;
     font-family: Abel;
+    text-shadow: 1px 1px 4px;
 }
 
 h3,
