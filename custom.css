@@ -168,3 +168,8 @@ a.nav-link.active.pills {
 #index-wrapper h2.text-center {
     text-shadow: 1px 1px 2px;
 }
+
+div.site-info p {
+    font-family: Anaheim;
+    font-size: 16px;
+}
