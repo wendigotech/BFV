@@ -448,7 +448,7 @@ get_header(); ?>
                                 }
                              ?>
                             <figcaption class="page-link" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
-                                <a class="btn active hvr-sweep-to-top btn-lg float-right w-auto h-auto btn-dark" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
+                                <a class="btn active hvr-sweep-to-top btn-lg float-right w-auto h-auto btn-light shadow-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
                                 <a class="btn active btn-sm btn-danger hvr-sweep-to-left hint--bottom hint--small h-auto w-auto" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
                                 <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                 <?php the_excerpt( ); ?>
