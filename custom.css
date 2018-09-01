@@ -86,4 +86,5 @@ figcaption p {
     z-index: 1;
     position: relative;
     align-self: center;
+    border-radius: 10px;
 }
