@@ -72,7 +72,6 @@ figcaption h6 {
 
 figcaption p {
     font-size: 1vw;
-    text-align: center;
     font-family: Abhaya Libre;
     color: #fdfdfd;
 }
@@ -172,4 +171,17 @@ a.nav-link.active.pills {
 div.site-info p {
     font-family: Anaheim;
     font-size: 16px;
+}
+
+.grid-slide1 {
+    display: grid;
+    grid-template-columns: 13px 2fr 1fr 2fr 2fr 2fr 13px;
+    grid-template-rows: none none;
+    grid-auto-rows: 165px;
+    grid-gap: 10px;
+    grid-template-areas: '. a a a . . .' '. . . . . . .';
+}
+
+.grid-carousel {
+    grid-area: 1 / 1 / 5 / 9;
 }

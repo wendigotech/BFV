@@ -2,14 +2,14 @@
 get_header(); ?>
 
 <div class="wrapper grid-content" id="index-wrapper">
-    <div class="container" style="grid-area:1 / 2 / 6 / 8;"> 
+    <div class="container grid-carousel"> 
         <h2 class="text-center" data-html="false" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h2> 
         <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3000"> 
             <a class="carousel-control-prev position-relative float-left mb-2 bg-info shadow-sm" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'st2' ); ?></span> </a>
             <a class="carousel-control-next position-relative float-right mb-2 bg-info shadow-sm" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'st2' ); ?></span> </a> 
             <div class="carousel-inner" style="grid-gap: 10px;"> 
                 <div class="carousel-item active" style="grid-area:1 / 1 / 3 / 4;"> 
-                    <div class="row" style="display: grid; grid-template-columns: 13px 2fr 1fr 2fr 2fr 2fr 13px; grid-template-rows: none none; grid-auto-rows: 160px; grid-gap: 10px;">
+                    <div class="row grid-slide1">
                         <?php
                             $tag_choice_args = array(
                                 'tag' => 'choice',
@@ -22,18 +22,29 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 2 / 2 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 2 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
                                         }
                                      ?>
-                                    <figcaption>
-                                        <a class="btn active btn-sm d-table btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>" title="111"><?php _e( 'Play', 'st2' ); ?></a>
-                                        <a class="btn active btn-sm btn-danger d-table hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                        <?php the_excerpt( ); ?>
-                                    </figcaption>
+                                    <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                        <?php _e( 'Link', 'st2' ); ?>
+                                        <figcaption>
+                                            <div class="row pg-empty-placeholder">
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> 
+                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                <?php the_excerpt( ); ?>
+                                            </div>
+                                        </figcaption>
+                                    </a>
                                 </figure>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>
@@ -43,18 +54,29 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 4 / 2 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:1 / 5 / 2 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
                                         }
                                      ?>
-                                    <figcaption>
-                                        <a class="btn active btn-sm d-table btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                        <a class="btn active btn-sm btn-danger d-table hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                        <?php the_excerpt( ); ?>
-                                    </figcaption>
+                                    <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                        <?php _e( 'Link', 'st2' ); ?>
+                                        <figcaption>
+                                            <div class="row pg-empty-placeholder">
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> 
+                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                <?php the_excerpt( ); ?>
+                                            </div>
+                                        </figcaption>
+                                    </a>
                                 </figure>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>
@@ -64,18 +86,29 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 6 / 2 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 4 / 3 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
                                         }
                                      ?>
-                                    <figcaption>
-                                        <a class="btn active btn-sm d-table btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                        <a class="btn active btn-sm btn-danger d-table hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                        <?php the_excerpt( ); ?>
-                                    </figcaption>
+                                    <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                        <?php _e( 'Link', 'st2' ); ?>
+                                        <figcaption>
+                                            <div class="row pg-empty-placeholder">
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> 
+                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                <?php the_excerpt( ); ?>
+                                            </div>
+                                        </figcaption>
+                                    </a>
                                 </figure>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>
@@ -85,60 +118,29 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
                                         }
                                      ?>
-                                    <figcaption>
-                                        <a class="btn active btn-sm d-table btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                        <a class="btn active btn-sm btn-danger d-table hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                        <?php the_excerpt( ); ?>
-                                    </figcaption>
-                                </figure>
-                            <?php endwhile; ?>
-                            <?php wp_reset_postdata(); ?>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                        <?php endif; ?>
-                        <?php if ( $tag_choice->have_posts() ) : ?>
-                            <?php $tag_choice_item_number = 0; ?>
-                            <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 3 / 3 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                    <?php
-                                        if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
-                                        }
-                                     ?>
-                                    <figcaption>
-                                        <a class="btn active btn-sm d-table btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                        <a class="btn active btn-sm btn-danger d-table hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                        <?php the_excerpt( ); ?>
-                                    </figcaption>
-                                </figure>
-                            <?php endwhile; ?>
-                            <?php wp_reset_postdata(); ?>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                        <?php endif; ?>
-                        <?php if ( $tag_choice->have_posts() ) : ?>
-                            <?php $tag_choice_item_number = 0; ?>
-                            <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 5 / 3 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
-                                    <?php
-                                        if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
-                                        }
-                                     ?>
-                                    <figcaption>
-                                        <a class="btn active btn-sm d-table btn-warning btn-block hvr-sweep-to-top" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a>
-                                        <a class="btn active btn-sm btn-danger d-table hvr-sweep-to-left" role="button" aria-pressed="true" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a>
-                                        <h6 class="text-center display-5"><?php the_title(); ?></h6>
-                                        <?php the_excerpt( ); ?>
-                                    </figcaption>
+                                    <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                        <?php _e( 'Link', 'st2' ); ?>
+                                        <figcaption>
+                                            <div class="row pg-empty-placeholder">
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12"> 
+                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                <?php the_excerpt( ); ?>
+                                            </div>
+                                        </figcaption>
+                                    </a>
                                 </figure>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>
