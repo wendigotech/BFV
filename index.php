@@ -415,15 +415,15 @@ get_header(); ?>
             </ol>                             
         </div>
     </div>                     
-    <ul class="nav nav-pills" role="tablist" style="grid-area:6 / 3 / 7 / 8;"> 
+    <ul class="nav nav-pills" role="tablist" style="grid-area:5 / 3 / 6 / 8;"> 
         <li class="nav-item align-self-center"> 
-            <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
+            <a class="nav-link active pills" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
         <li class="nav-item align-self-center"> 
-            <a class="nav-link" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
+            <a class="nav-link pills" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
         </li>                         
         <li class="nav-item align-self-center"> 
-            <a class="nav-link" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
+            <a class="nav-link pills" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
         </li>                         
     </ul>
     <div class="tab-content" style="grid-area:6 / 1 / 14 / 9;">

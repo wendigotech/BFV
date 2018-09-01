@@ -26,7 +26,7 @@
 .grid-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
     grid-gap: 10px;
 }
 
@@ -149,4 +149,18 @@ a.nav-link.footer {
     color: #fafafa;
     font-weight: 600;
     font-family: Anaheim;
+}
+
+a.nav-link.pills {
+    font-family: Anaheim;
+    font-weight: 600;
+    color: #5b7485;
+    background-color: #5fc9da;
+}
+
+a.nav-link.active.pills {
+    background-color: #fbfeff;
+    font-family: Anaheim;
+    font-weight: 600;
+    color: #5b7485;
 }
