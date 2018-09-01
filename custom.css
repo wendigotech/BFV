@@ -144,3 +144,15 @@ div#wrapper-footer {
     border-color: #ffffff;
     border-radius: 10px;
 }
+
+a.nav-link.footer {
+    color: #fafafa;
+    font-weight: 600;
+    font-family: Anaheim;
+}
+
+a.nav-link.footer {
+    font-family: Anaheim;
+    font-weight: 600;
+    color: #fafafa;
+}
