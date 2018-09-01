@@ -13166,6 +13166,9 @@ h1.navbar-brand > a {
 .nav-link {
     margin-right: 5px;
     margin-left: 5px;
+    color: #fdf4f4;
+    font-family: Anaheim;
+    font-weight: 600;
 }
 
 .carousel-indicators {
@@ -13265,6 +13268,7 @@ p {
     margin-bottom: 1rem;
     font-family: Anaheim;
     word-break: break-word;
+    font-size: 1vw;
 }
 
 .page-link {
