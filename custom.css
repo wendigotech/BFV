@@ -11,7 +11,7 @@
     position: relative;
     display: inline-block;
     margin: 0;
-    background-color: #2266a5;
+    background-color: #89cff0;
     color: #fff;
     overflow: hidden;
     -webkit-backface-visibility: hidden;
@@ -104,7 +104,7 @@ figcaption p {
 
 [class*=' imghvr-'] figcaption,
 [class^=imghvr-] figcaption {
-    background-color: #5FC9DA;
+    background-color: #89cff0;
     padding: 30px;
     position: absolute;
     top: 0;
@@ -115,7 +115,7 @@ figcaption p {
 }
 
 body {
-    background: linear-gradient(116deg, rgb(251, 252, 253) 15.9763%, #5fc9da 69.2308%);
+    background: linear-gradient(125deg, rgb(251, 252, 253) 23.0828%, rgb(95, 201, 218) 57.9882%);
 }
 
 div#wrapper-footer {
