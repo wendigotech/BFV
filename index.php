@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<div class="wrapper grid-content" id="index-wrapper">
+<div class="wrapper" id="index-wrapper">
     <div class="container grid-carousel"> 
         <h2 class="text-center" data-html="false" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h2> 
         <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3000"> 
@@ -22,7 +22,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 2 / 2 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 2 / 3 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -54,7 +54,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:1 / 5 / 2 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:2 / 5 / 3 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -86,7 +86,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 4 / 3 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:3 / 4 / 4 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -118,7 +118,7 @@ get_header(); ?>
                         <?php if ( $tag_choice->have_posts() ) : ?>
                             <?php $tag_choice_item_number = 0; ?>
                             <?php while ( $tag_choice->have_posts() && $tag_choice_item_number++ < 1 ) : $tag_choice->the_post(); ?>
-                                <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                                <figure style="grid-area:3 / 2 / 4 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( 'normal' );
@@ -417,17 +417,6 @@ get_header(); ?>
             </ol>                             
         </div>
     </div>                     
-    <ul class="nav nav-pills" role="tablist" style="grid-area:5 / 3 / 6 / 8;"> 
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
-        </li>                         
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
-        </li>                         
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
-        </li>                         
-    </ul>
     <div class="tab-content" style="grid-area:6 / 1 / 14 / 9;">
         <div class="tab-pane active" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
             <div class="container grid-content">
@@ -632,6 +621,17 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
+                <ul class="nav nav-pills" role="tablist" style="grid-area:1 / 2 / 2 / 7;"> 
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
+                    </li>                                     
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
+                    </li>                                     
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
+                    </li>                                     
+                </ul>
             </div>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">

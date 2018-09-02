@@ -30,6 +30,13 @@
     grid-gap: 10px;
 }
 
+.grid-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-gap: 10px;
+}
+
 li.nav-item.active {
     border-bottom: 2px solid;
 }
@@ -176,10 +183,8 @@ div.site-info p {
 .grid-slide1 {
     display: grid;
     grid-template-columns: 13px 2fr 1fr 2fr 2fr 2fr 13px;
-    grid-template-rows: none none;
-    grid-auto-rows: 140px;
+    grid-template-rows: 13px 100px 100px 13px;
     grid-gap: 13px;
-    grid-template-areas: '. a a a . . .' '. . . . . . .';
 }
 
 .grid-carousel {
