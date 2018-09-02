@@ -31,7 +31,7 @@ get_header(); ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                         <?php _e( 'Link', 'st2' ); ?>
                                         <figcaption>
-                                            <div class="row pg-empty-placeholder">
+                                            <div class="row">
                                                 <div class="col-md-6">
                                                     <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
                                                 </div>
@@ -63,7 +63,7 @@ get_header(); ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                         <?php _e( 'Link', 'st2' ); ?>
                                         <figcaption>
-                                            <div class="row pg-empty-placeholder">
+                                            <div class="row">
                                                 <div class="col-md-6">
                                                     <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
                                                 </div>
@@ -95,7 +95,7 @@ get_header(); ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                         <?php _e( 'Link', 'st2' ); ?>
                                         <figcaption>
-                                            <div class="row pg-empty-placeholder">
+                                            <div class="row">
                                                 <div class="col-md-6">
                                                     <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
                                                 </div>
@@ -127,7 +127,7 @@ get_header(); ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
                                         <?php _e( 'Link', 'st2' ); ?>
                                         <figcaption>
-                                            <div class="row pg-empty-placeholder">
+                                            <div class="row">
                                                 <div class="col-md-6">
                                                     <a class="btn active hvr-sweep-to-left hint--bottom hint--small h-auto w-auto shadow-sm text-light btn-sm border border-light" aria-label="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
                                                 </div>

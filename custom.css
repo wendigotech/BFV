@@ -183,7 +183,7 @@ div.site-info p {
 .grid-slide1 {
     display: grid;
     grid-template-columns: 13px 2fr 1fr 2fr 2fr 2fr 13px;
-    grid-template-rows: 13px 100px 100px 13px;
+    grid-template-rows: 13px 150px 150px 13px;
     grid-gap: 13px;
 }
 
