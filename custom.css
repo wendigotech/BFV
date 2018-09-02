@@ -23,6 +23,14 @@
     background: -webkit-radial-gradient(center center, rgb(172, 230, 242) 17.9408%, rgb(95, 201, 218) 84%);
 }
 
+.grid-1 {
+    display: grid;
+    grid-template-columns: 0,5fr 1fr 1fr 1fr 1fr 1fr 1fr 0,5fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-gap: 10px;
+    grid-template-areas: '. . . . . . . .' '. a a a a . . .' '. a a a a . . .' '. a a a a . . .' '. . . . . . . .' '. . . . . . . .' '. . . . . . . .' '. . . . . . . .' '. . . . . . . .' '. . . . . . . .' '. . . . . . . .' '. . . . . . . .';
+}
+
 .grid-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
