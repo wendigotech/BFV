@@ -180,6 +180,20 @@ div.site-info p {
     font-size: 16px;
 }
 
+.grid-slide3 {
+    display: grid;
+    grid-template-columns: 13px 2fr 2fr 3fr 2fr 2fr 13px;
+    grid-template-rows: 13px 150px 150px 13px;
+    grid-gap: 13px;
+}
+
+.grid-slide2 {
+    display: grid;
+    grid-template-columns: 13px 3fr 1fr 3fr 3fr 2fr 13px;
+    grid-template-rows: 13px 150px 150px 13px;
+    grid-gap: 13px;
+}
+
 .grid-slide1 {
     display: grid;
     grid-template-columns: 13px 2fr 1fr 2fr 2fr 2fr 13px;
