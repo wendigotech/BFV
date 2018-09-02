@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper grid-content" id="index-wrapper">
     <div class="container grid-carousel"> 
         <h2 class="text-center" data-html="false" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Editor´s choice', 'st2' ); ?></h2> 
         <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="3000"> 
@@ -625,17 +625,6 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <ul class="nav nav-pills" role="tablist" style="grid-area:1 / 2 / 2 / 7;"> 
-                    <li class="nav-item align-self-center"> 
-                        <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
-                    </li>                                     
-                    <li class="nav-item align-self-center"> 
-                        <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
-                    </li>                                     
-                    <li class="nav-item align-self-center"> 
-                        <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
-                    </li>                                     
-                </ul>
             </div>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
@@ -1049,6 +1038,17 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
+    <ul class="nav nav-pills" role="tablist" style="grid-area:6 / 3 / 7 / 7;"> 
+        <li class="nav-item align-self-center"> 
+            <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
+        </li>                         
+        <li class="nav-item align-self-center"> 
+            <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
+        </li>                         
+        <li class="nav-item align-self-center"> 
+            <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
+        </li>                         
+    </ul>
 </div>                                 
 
 <?php get_footer(); ?>
