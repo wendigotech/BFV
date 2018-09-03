@@ -28,10 +28,7 @@ get_header(); ?>
                                 <span class="nav-next"><?php next_post_link( '%link', __( '%title &raquo;', 'st2' ) ); ?></span> 
                             </div>                                             
                             <!-- .nav-links -->                                             
-                        </nav>                                         
-                        <?php if ( comments_open() || get_comments_number() || is_single() ) : ?>
-                            <?php comments_template( '/comments.php' ); ?>
-                        <?php endif; ?> 
+                        </nav>                                                                                  
                     </div>                                     
                 </main>                                 
             </div>                             
