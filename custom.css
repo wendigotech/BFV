@@ -3,9 +3,8 @@
     vertical-align: middle;
     max-width: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     height: 100%;
-    transform-style: flat;
 }
 
 [class*=' imghvr-'],
