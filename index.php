@@ -25,7 +25,7 @@ get_header(); ?>
                                 <figure style="grid-area:2 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -57,7 +57,7 @@ get_header(); ?>
                                 <figure style="grid-area:2 / 3 / 3 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -89,7 +89,7 @@ get_header(); ?>
                                 <figure style="grid-area:2 / 6 / 3 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -121,7 +121,7 @@ get_header(); ?>
                                 <figure style="grid-area:3 / 7 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -153,7 +153,7 @@ get_header(); ?>
                                 <figure style="grid-area:3 / 4 / 4 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -185,7 +185,7 @@ get_header(); ?>
                                 <figure style="grid-area:3 / 2 / 4 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -221,7 +221,7 @@ get_header(); ?>
                                 <figure style="grid-area:2 / 2 / 3 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -253,7 +253,7 @@ get_header(); ?>
                                 <figure style="grid-area:2 / 4 / 3 / 7;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -285,7 +285,7 @@ get_header(); ?>
                                 <figure style="grid-area:2 / 7 / 3 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
@@ -317,7 +317,7 @@ get_header(); ?>
                                 <figure style="grid-area:3 / 6 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                         if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail( 'normal' );
+                                            the_post_thumbnail( 'thumbnail' );
                                         }
                                      ?>
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
