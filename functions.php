@@ -90,6 +90,16 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
+        'name' => __( 'Bottom Full', 'st2' ),
+        'id' => 'footerfull',
+        'description' => 'Full bottom widget with dynamic grid',
+        'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
+        'after_widget' => '</div><!-- .footer-widget -->',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
         'name' => __( 'A1', 'st2' ),
         'id' => 'a1',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -105,16 +115,6 @@ function st2_widgets_init() {
         'after_widget' => '</div>',
         'before_title' => '<h1 class="widgettitle">',
         'after_title' => '</h1>'
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Bottom Full', 'st2' ),
-        'id' => 'footerfull',
-        'description' => 'Full bottom widget with dynamic grid',
-        'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
-        'after_widget' => '</div><!-- .footer-widget -->',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
     ) );
 
     /* Pinegrow generated Register Sidebars End */
@@ -150,18 +150,6 @@ function st2_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
-    $wp_customize->add_setting( 'footer_text', array(
-        'type' => 'theme_mod',
-        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Content', 'st2' ),
-        'type' => 'textarea',
-        'section' => 'footer_settings'
-    ));
-
     $wp_customize->add_setting( 'jumbotron_heading_color', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -176,6 +164,18 @@ function st2_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
         'default' => __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Content', 'st2' ),
+        'type' => 'textarea',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
         'sanitize_callback' => $pgwp_sanitize
     ));
 
@@ -213,6 +213,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Styles Begin */
 
+    wp_deregister_style( 'style' );
+    wp_enqueue_style( 'style', get_bloginfo('stylesheet_url'), false, null, 'all');
+
     wp_deregister_style( 'bootstrap' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', false, null, 'all');
 
@@ -221,9 +224,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
-
-    wp_deregister_style( 'style' );
-    wp_enqueue_style( 'style', get_bloginfo('stylesheet_url'), false, null, 'all');
 
     wp_deregister_style( 'imagehover' );
     wp_enqueue_style( 'imagehover', 'https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/1.0/css/imagehover.min.css', false, null, 'all');
