@@ -8,7 +8,7 @@ get_header(); ?>
                 $Sports_args = array(
                     'category_name' => 'sports',
                     'nopaging' => true,
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'orderby' => 'date'
                 )
             ?>
