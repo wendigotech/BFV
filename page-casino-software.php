@@ -8,7 +8,7 @@ get_header(); ?>
                 $Software_args = array(
                     'category_name' => 'software',
                     'nopaging' => true,
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'orderby' => 'date'
                 )
             ?>
