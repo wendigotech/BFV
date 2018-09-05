@@ -8,7 +8,7 @@ get_header(); ?>
                 $Bingo_args = array(
                     'category_name' => 'bingo',
                     'nopaging' => true,
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'orderby' => 'date'
                 )
             ?>
