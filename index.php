@@ -620,7 +620,7 @@ get_header(); ?>
                     $casino_args = array(
                         'category_name' => 'casino',
                         'nopaging' => true,
-                        'order' => 'ASC',
+                        'order' => 'DESC',
                         'orderby' => 'date'
                     )
                 ?>

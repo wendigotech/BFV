@@ -90,16 +90,6 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Bottom Full', 'st2' ),
-        'id' => 'footerfull',
-        'description' => 'Full bottom widget with dynamic grid',
-        'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
-        'after_widget' => '</div><!-- .footer-widget -->',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'A1', 'st2' ),
         'id' => 'a1',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -115,6 +105,16 @@ function st2_widgets_init() {
         'after_widget' => '</div>',
         'before_title' => '<h1 class="widgettitle">',
         'after_title' => '</h1>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Bottom Full', 'st2' ),
+        'id' => 'footerfull',
+        'description' => 'Full bottom widget with dynamic grid',
+        'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
+        'after_widget' => '</div><!-- .footer-widget -->',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
     ) );
 
     /* Pinegrow generated Register Sidebars End */
