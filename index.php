@@ -14,7 +14,7 @@ get_header(); ?>
                             $tag_choice_args = array(
                                 'tag' => 'choice',
                                 'nopaging' => true,
-                                'order' => 'ASC',
+                                'order' => 'DESC',
                                 'orderby' => 'date'
                             )
                         ?>
@@ -889,7 +889,7 @@ get_header(); ?>
                     $Sports_args = array(
                         'category_name' => 'sports',
                         'nopaging' => true,
-                        'order' => 'ASC',
+                        'order' => 'DESC',
                         'orderby' => 'date'
                     )
                 ?>
@@ -1094,7 +1094,7 @@ get_header(); ?>
                     $Bingo_args = array(
                         'category_name' => 'bingo',
                         'nopaging' => true,
-                        'order' => 'ASC',
+                        'order' => 'DESC',
                         'orderby' => 'date'
                     )
                 ?>
