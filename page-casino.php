@@ -4,6 +4,15 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1"> 
         <div class="container grid-1">
+            <?php
+                $casino_args = array(
+                    'category_name' => 'casino',
+                    'nopaging' => true,
+                    'order' => 'DESC',
+                    'orderby' => 'date'
+                )
+            ?>
+            <?php $casino = new WP_Query( $casino_args ); ?>
             <?php if ( $casino->have_posts() ) : ?>
                 <?php $casino_item_number = 0; ?>
                 <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
