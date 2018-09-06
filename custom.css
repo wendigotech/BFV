@@ -232,3 +232,11 @@ div.site-info p {
 .grid-carousel {
     grid-area: 1 / 1 / 5 / 9;
 }
+
+.bkg2 {
+    background-color: #ea6e6e;
+}
+
+.bkg3 {
+    background-color: #8defac;
+}
