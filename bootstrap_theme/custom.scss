@@ -186,3 +186,16 @@ p {
 
     background: -webkit-repeating-radial-gradient(right center, rgb(172, 182, 229) 0%, rgb(134, 253, 232) 100%);
 }
+
+a {
+    color: #89cff0;
+    text-decoration: $link-decoration;
+    background-color: transparent; // Remove the gray background on active links in IE 10.
+    -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+    @include hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+
+    font-family: abel;
+}
