@@ -110,6 +110,7 @@ figcaption p {
     font-family: Abhaya Libre;
     color: #fdfdfd;
     font-weight: 800;
+    text-align: center;
 }
 
 [class*=' imghvr-'] a.btn,
