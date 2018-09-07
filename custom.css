@@ -106,11 +106,12 @@ figcaption h6 {
 }
 
 figcaption p {
-    font-size: 1vw;
     font-family: Abhaya Libre;
     color: #fdfdfd;
-    font-weight: 800;
+    font-weight: 900;
     text-align: center;
+    word-break: break-all;
+    font-size: 15px;
 }
 
 [class*=' imghvr-'] a.btn,
