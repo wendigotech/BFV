@@ -240,11 +240,11 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'style-2' );
     wp_enqueue_style( 'style-2', 'https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500,600,700,800', false, null, 'all');
 
-    wp_deregister_style( 'hint' );
-    wp_enqueue_style( 'hint', 'https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.5.0/hint.min.css', false, null, 'all');
-
     wp_deregister_style( 'style-3' );
     wp_enqueue_style( 'style-3', 'https://fonts.googleapis.com/css?family=Anaheim', false, null, 'all');
+
+    wp_deregister_style( 'wenk' );
+    wp_enqueue_style( 'wenk', 'https://cdnjs.cloudflare.com/ajax/libs/wenk/1.0.7/wenk.min.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
