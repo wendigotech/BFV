@@ -149,11 +149,11 @@ figcaption p {
 }
 
 body {
-    background: linear-gradient(171deg, rgb(255, 255, 255) 2.06509%, rgb(95, 201, 218) 38.2722%);
+    background: linear-gradient(159deg, rgb(246, 251, 255) 13.0178%, rgb(91, 116, 133) 42.0118%);
 }
 
 div#wrapper-footer {
-    background-color: #5b7485;
+    background-color: #5fc9da;
 }
 
 .hvr-sweep-to-top:before {
