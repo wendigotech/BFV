@@ -24,7 +24,6 @@ get_header(); ?>
                                         <div class="container">
                                             <?php
                                                 $Tags_args = array(
-                                                    'category_name' => 'software',
                                                     'tag' => array( 'microgaming', 'net-net', 'playtech', 'evoulution-gaming', 'playn-go' ),
                                                     'post_type' => 'Tags',
                                                     'nopaging' => true,
