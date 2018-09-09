@@ -7,8 +7,14 @@ get_header(); ?>
             <div class="content-area col-md-12" id="primary"> 
                 <main class="site-main" id="main"> 
                     <div> 
-                        <?php if ( have_posts() ) : ?>
-                            <?php while ( have_posts() ) : the_post(); ?>
+                        <?php
+                            $Software_args = array(
+                                'category_name' => 'software'
+                            )
+                        ?>
+                        <?php $Software = new WP_Query( $Software_args ); ?>
+                        <?php if ( $Software->have_posts() ) : ?>
+                            <?php while ( $Software->have_posts() ) : $Software->the_post(); ?>
                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                     <header class="entry-header"> 
                                         <h1 class="text-center text-light"><?php the_title(); ?></h1> 
@@ -18,6 +24,7 @@ get_header(); ?>
                                     </div>                                                     
                                 </article>
                             <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                         <?php endif; ?> 
