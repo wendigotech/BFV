@@ -27,6 +27,7 @@ get_header(); ?>
                                                     $Tags_args = array(
                                                         'tag' => array( 'microgaming', 'net-net', 'playtech', 'evoulution-gaming', 'playn-go' ),
                                                         'nopaging' => true,
+                                                        'posts_per_page' => '3',
                                                         'order' => 'DESC',
                                                         'orderby' => 'date'
                                                     )
