@@ -22,55 +22,56 @@ get_header(); ?>
                                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                                         <?php endif; ?> 
                                         <div class="container">
-                                            <?php
-                                                $Tags_args = array(
-                                                    'tag' => array( 'microgaming', 'net-net', 'playtech', 'evoulution-gaming', 'playn-go' ),
-                                                    'post_type' => 'Tags',
-                                                    'nopaging' => true,
-                                                    'order' => 'ASC',
-                                                    'orderby' => 'date'
-                                                )
-                                            ?>
-                                            <?php $Tags = new WP_Query( $Tags_args ); ?>
-                                            <?php if ( $Tags->have_posts() ) : ?>
-                                                <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
-                                                    <div class="col-md-4">                                                          
+                                            <?php if ( in_category( 'software' ) ) : ?>
+                                                <?php
+                                                    $Tags_args = array(
+                                                        'tag' => array( 'microgaming', 'net-net', 'playtech', 'evoulution-gaming', 'playn-go' ),
+                                                        'nopaging' => true,
+                                                        'order' => 'DESC',
+                                                        'orderby' => 'date'
+                                                    )
+                                                ?>
+                                                <?php $Tags = new WP_Query( $Tags_args ); ?>
+                                                <?php if ( $Tags->have_posts() ) : ?>
+                                                    <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
+                                                        <div class="col-md-4">                                                              
 
-                                                        <?php while ( $Tags->have_posts() ) : $Tags->the_post(); ?>
-                                                            <figure class="imghvr-blur">
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'normal' );
-                                                                    }
-                                                                 ?>
-                                                                <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
-                                                                    <?php _e( 'Link', 'st2' ); ?>
-                                                                    <figcaption>
-                                                                        <div class="row pg-empty-placeholder">
-                                                                            <div class="col-md-6">
-                                                                                <a class="btn active hvr-sweep-to-left h-auto w-auto shadow-sm text-light btn-sm border border-light" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                            <?php while ( $Tags->have_posts() ) : $Tags->the_post(); ?>
+                                                                <figure class="imghvr-blur">
+                                                                    <?php
+                                                                        if ( has_post_thumbnail() ) {
+                                                                            the_post_thumbnail( 'normal' );
+                                                                        }
+                                                                     ?>
+                                                                    <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                                                        <?php _e( 'Link', 'st2' ); ?>
+                                                                        <figcaption>
+                                                                            <div class="row pg-empty-placeholder">
+                                                                                <div class="col-md-6">
+                                                                                    <a class="btn active hvr-sweep-to-left h-auto w-auto shadow-sm text-light btn-sm border border-light" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="col-md-6">
-                                                                                <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                                            <div class="col-md-12"> 
+                                                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                                                <?php the_excerpt( ); ?>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="col-md-12"> 
-                                                                            <h6 class="text-center display-5 "><?php the_title(); ?></h6>
-                                                                            <?php the_excerpt( ); ?>
-                                                                        </div>
-                                                                    </figcaption>
-                                                                </a>
-                                                            </figure>
-                                                        <?php endwhile; ?>
-                                                        <?php wp_reset_postdata(); ?>
+                                                                        </figcaption>
+                                                                    </a>
+                                                                </figure>
+                                                            <?php endwhile; ?>
+                                                            <?php wp_reset_postdata(); ?>
+                                                        </div>
+                                                        <div class="col-md-4">                                                              
+</div>
+                                                        <div class="col-md-4">                                                              
+</div>
                                                     </div>
-                                                    <div class="col-md-4">                                                          
-</div>
-                                                    <div class="col-md-4">                                                          
-</div>
-                                                </div>
-                                            <?php else : ?>
-                                                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php else : ?>
+                                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                         </div>
                                         <nav class="container navigation post-navigation pt-3 pb-3"> 
