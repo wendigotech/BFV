@@ -21,6 +21,109 @@ get_header(); ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                         <?php endif; ?> 
+                        <div class="container">
+                            <?php
+                                $Tags_args = array(
+                                    'category_name' => 'software',
+                                    'tag' => array( 'microgaming', 'net-net', 'playtech', 'evoulution-gaming', 'playn-go' ),
+                                    'post_type' => 'Tags',
+                                    'nopaging' => true,
+                                    'order' => 'ASC',
+                                    'orderby' => 'date'
+                                )
+                            ?>
+                            <?php $Tags = new WP_Query( $Tags_args ); ?>
+                            <?php if ( $Tags->have_posts() ) : ?>
+                                <?php while ( $Tags->have_posts() ) : $Tags->the_post(); ?>
+                                    <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
+                                        <div class="col-md-4">                                                              
+
+                                            <figure class="imghvr-blur">
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'normal' );
+                                                    }
+                                                 ?>
+                                                <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                                    <?php _e( 'Link', 'st2' ); ?>
+                                                    <figcaption>
+                                                        <div class="row pg-empty-placeholder">
+                                                            <div class="col-md-6">
+                                                                <a class="btn active hvr-sweep-to-left h-auto w-auto shadow-sm text-light btn-sm border border-light" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12"> 
+                                                            <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                            <?php the_excerpt( ); ?>
+                                                        </div>
+                                                    </figcaption>
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-4">                                                              
+
+                                            <figure class="imghvr-blur">
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'normal' );
+                                                    }
+                                                 ?>
+                                                <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                                    <?php _e( 'Link', 'st2' ); ?>
+                                                    <figcaption>
+                                                        <div class="row pg-empty-placeholder">
+                                                            <div class="col-md-6">
+                                                                <a class="btn active hvr-sweep-to-left h-auto w-auto shadow-sm text-light btn-sm border border-light" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12"> 
+                                                            <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                            <?php the_excerpt( ); ?>
+                                                        </div>
+                                                    </figcaption>
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-4">                                                              
+
+                                            <figure class="imghvr-blur">
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'normal' );
+                                                    }
+                                                 ?>
+                                                <a href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>">
+                                                    <?php _e( 'Link', 'st2' ); ?>
+                                                    <figcaption>
+                                                        <div class="row pg-empty-placeholder">
+                                                            <div class="col-md-6">
+                                                                <a class="btn active hvr-sweep-to-left h-auto w-auto shadow-sm text-light btn-sm border border-light" role="button" aria-pressed="true" data-html="false" href="<?php echo get_post_meta( get_the_ID(), 'T&C´s link', true ); ?>" title="<?php echo get_post_meta( get_the_ID(), 'Key', true ); ?>"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12"> 
+                                                            <h6 class="text-center display-5 "><?php the_title(); ?></h6>
+                                                            <?php the_excerpt( ); ?>
+                                                        </div>
+                                                    </figcaption>
+                                                </a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
+                            <?php else : ?>
+                                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                            <?php endif; ?>
+                        </div>
                         <nav class="container navigation post-navigation pt-3 pb-3"> 
                             <h2 class="sr-only"><?php _e( 'Post navigation', 'st2' ); ?></h2> 
                             <div class="row nav-links justify-content-between"> 
