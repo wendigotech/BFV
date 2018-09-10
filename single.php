@@ -7,9 +7,8 @@ get_header(); ?>
             <div class="content-area col-md-12" id="primary"> 
                 <main class="site-main" id="main"> 
                     <div> 
-                        <?php $Tags = new WP_Query( $Tags_args ); ?>
-                        <?php if ( $Tags->have_posts() ) : ?>
-                            <?php while ( $Tags->have_posts() ) : $Tags->the_post(); ?>
+                        <?php if ( have_posts() ) : ?>
+                            <?php while ( have_posts() ) : the_post(); ?>
                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                     <header class="entry-header"> 
                                         <h1 class="text-center text-light"><?php the_title(); ?></h1> 
@@ -19,7 +18,6 @@ get_header(); ?>
                                     </div>                                                     
                                 </article>
                             <?php endwhile; ?>
-                            <?php wp_reset_postdata(); ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                         <?php endif; ?> 
