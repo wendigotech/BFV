@@ -51,7 +51,7 @@
             </div>             
         </div>                           
         <script>
-new Tippy('#t1',{
+new Tippy('a#t1',{
     		position:'bottom',
     		animation:'scale',
     		arrow:'true'
