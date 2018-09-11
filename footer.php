@@ -49,14 +49,7 @@
                 </div>                 
                 <!-- container end -->
             </div>             
-        </div>                           
-        <script>
-new Tippy('a#t1',{
-    		position:'bottom',
-    		animation:'scale',
-    		arrow:'true'
-    	});
-</script>         
+        </div>                                    
         <script>
     $(function() {
     $('[data-toggle="tooltip"]').tooltip();
