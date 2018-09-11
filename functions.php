@@ -205,10 +205,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_enqueue_script( 'tooltip', 'https://cdnjs.cloudflare.com/ajax/libs/tooltip.js/1.3.0/tooltip.min.js', null, null, true );
 
-    wp_enqueue_script( 'a', null, null, null, true );
-
-    wp_enqueue_script( 'b', null, null, null, true );
-
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', null, null, true );
 
     wp_enqueue_script( 'reporter', 'https://scripts.usehawk.com/5b8bc7985f431a00597e787a/reporter.min.js?a=5b8bc7685f431a00597e7875', null, null, true );
