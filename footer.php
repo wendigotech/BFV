@@ -57,6 +57,11 @@ new Tippy('a#t1',{
     		arrow:'true'
     	});
 </script>         
+        <script>
+    $(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
         <?php wp_footer(); ?>
     </body>     
 </html>
