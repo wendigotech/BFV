@@ -49,7 +49,16 @@
                 </div>                 
                 <!-- container end -->
             </div>             
-        </div>                                    
+        </div>                           
+        <script>
+$( document ).ready(function() {
+  $( '[data-toggle="tooltip"]' ).each(function() {
+    new Tooltip($(this), {
+      placement: 'top',
+    });
+  });
+});
+</script>         
         <?php wp_footer(); ?>
     </body>     
 </html>
