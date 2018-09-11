@@ -51,7 +51,11 @@
             </div>             
         </div>                           
         <script>
-tippy('.btn')
+new Tippy('#t1',{
+    		position:'bottom',
+    		animation:'scale',
+    		arrow:'true'
+    	});
 </script>         
         <?php wp_footer(); ?>
     </body>     
