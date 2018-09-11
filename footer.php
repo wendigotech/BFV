@@ -56,6 +56,11 @@ tippy('.btn')
         <script>
 tippy(document.querySelector('.btn'))
 </script>         
+        <script>
+    $(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
         <?php wp_footer(); ?>
     </body>     
 </html>
