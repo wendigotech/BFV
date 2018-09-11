@@ -49,12 +49,13 @@
                 </div>                 
                 <!-- container end -->
             </div>             
-        </div>                                    
+        </div>                           
         <script>
-    $(function() {
-    $('[data-toggle="tooltip"]').tooltip();
-})
+tippy('.btn')
 </script>
+        <script>
+tippy(document.querySelector('.btn'))
+</script>         
         <?php wp_footer(); ?>
     </body>     
 </html>

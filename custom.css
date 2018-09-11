@@ -236,7 +236,5 @@ div.site-info p {
     grid-area: 1 / 1 / 5 / 9;
 }
 
-.tooltip {
-    width: 600px;
-    margin: 120px auto;
+.btn {
 }
