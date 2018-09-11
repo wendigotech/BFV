@@ -207,8 +207,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_enqueue_script( 'reporter', 'https://scripts.usehawk.com/5b8bc7985f431a00597e787a/reporter.min.js?a=5b8bc7685f431a00597e7875', null, null, true );
 
-    wp_deregister_script( 'jquerypowertip' );
-    wp_enqueue_script( 'jquerypowertip', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-powertip/1.2.0/jquery.powertip.min.js', false, null, true);
+    wp_enqueue_script( 'jquerypowertip', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-powertip/1.2.0/jquery.powertip.min.js', null, null, true );
+
+    wp_enqueue_script( null, null, null, null, true );
 
     /* Pinegrow generated Enqueue Scripts End */
 
