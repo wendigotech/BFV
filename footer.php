@@ -49,7 +49,17 @@
                 </div>                 
                 <!-- container end -->
             </div>             
-        </div>                                    
+        </div>                           
+        <script>
+    $(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
+        <script>
+    $(function() {
+    $('[data-toggle="popover"]').popover();
+})
+</script>         
         <?php wp_footer(); ?>
     </body>     
 </html>
