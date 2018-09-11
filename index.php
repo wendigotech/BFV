@@ -639,7 +639,7 @@ get_header(); ?>
                                 <figcaption>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <a class="btn active hvr-sweep-to-left h-auto w-auto shadow-sm text-light btn-sm border border-light" role="button" href="#" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="b"><?php _e( 'T&C´s', 'st2' ); ?></a> 
+                                            <a class="btn active hvr-sweep-to-left h-auto w-auto shadow-sm text-light btn-sm border border-light" role="button" href="#" data-toggle="popover" data-placement="top" data-trigger="hover" title="b" data-content="c"><?php _e( 'T&C´s', 'st2' ); ?></a> 
                                         </div>
                                         <div class="col-md-6">
                                             <a class="btn active hvr-sweep-to-top btn-light shadow-sm bg-light float-right text-uppercase font-weight-bold text-success btn-sm" role="button" aria-pressed="true" data-html="true" href="<?php echo get_post_meta( get_the_ID(), 'Link', true ); ?>"><?php _e( 'Play', 'st2' ); ?></a> 
