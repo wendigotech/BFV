@@ -51,19 +51,7 @@
             </div>             
         </div>                           
         <script>
-var popper = new Popper(
-    document.querySelector('.button'),
-    document.querySelector('.popper')
-);
-</script>
-        <script>
-document.addEventListener('DOMContentLoaded',function(){
-  var trigger = document.getElementsByClassName("is-success")[0];
-  var instance = new Tooltip(trigger,{
-    title: trigger.getAttribute('data-tooltip'),
-    trigger: "hover",
-  });
-});
+tippy('.btn')
 </script>         
         <?php wp_footer(); ?>
     </body>     
