@@ -49,17 +49,11 @@
                 </div>                 
                 <!-- container end -->
             </div>             
-        </div>                           
+        </div>                                    
         <script>
-tippy('.btn')
-</script>
-        <script>
-tippy(document.querySelector('.btn'))
-</script>         
-        <script>
-    $(function() {
-    $('[data-toggle="tooltip"]').tooltip();
-})
+    $('.info').powerTip({
+	placement: 'ne' // north-east tooltip position
+});
 </script>
         <?php wp_footer(); ?>
     </body>     
