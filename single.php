@@ -18,7 +18,7 @@ get_header(); ?>
                                     </div>                                                     
                                     <?php
                                         $tags_args = array(
-                                            'tag_id' => 'post_tag'
+                                            'tag_id' => $post->ID
                                         )
                                     ?>
                                     <?php $tags = new WP_Query( $tags_args ); ?>
