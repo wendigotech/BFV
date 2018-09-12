@@ -24,7 +24,7 @@ get_header(); ?>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <?php has_tag( $tag = '', $post = null ) {     return has_term( $tag, 'post_tag', $post ); } ?> 
+                                    <?php function has_tag( $tag = '', $post = null ) {     return has_term( $tag, 'post_tag', $post ); } ?> 
                                 </div>
                                 <div class="col-md-4"> 
                                     <figure class="imghvr-blur">
