@@ -9,7 +9,7 @@ get_header(); ?>
                     <div> 
                         <?php
                             $tags_args = array(
-                                'tag' => 'post_slug'
+                                'tag' => array( 'playn-go', 'microgaming' )
                             )
                         ?>
                         <?php $tags = new WP_Query( $tags_args ); ?>
