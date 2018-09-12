@@ -24,7 +24,7 @@ get_header(); ?>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <?php if ( has_term( 'post_tag' ) ) : ?>
+                                    <?php if ( has_tag( 'post_tag' ) ) : ?>
                                         <figure class="imghvr-blur">
                                             <?php
                                                 if ( has_post_thumbnail() ) {
