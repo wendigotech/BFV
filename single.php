@@ -16,12 +16,6 @@ get_header(); ?>
                                     <div class="entry-content"> 
                                         <?php the_content(); ?> 
                                     </div>                                                     
-                                    <?php
-                                        $tags_args = array(
-                                            'tag_id' => $post->ID
-                                        )
-                                    ?>
-                                    <?php $tags = new WP_Query( $tags_args ); ?>
                                     <?php if ( $tags->have_posts() ) : ?>
                                         <?php while ( $tags->have_posts() ) : $tags->the_post(); ?>
                                             <div class="container">
