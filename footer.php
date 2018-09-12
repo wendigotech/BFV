@@ -50,11 +50,6 @@
                 <!-- container end -->
             </div>             
         </div>                                    
-        <script>
-    jQuery('.info').powerTip({
-	placement: 'ne' // north-east tooltip position
-});
-</script>
         <?php wp_footer(); ?>
     </body>     
 </html>
