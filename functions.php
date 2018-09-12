@@ -197,8 +197,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_enqueue_script( 'jquery' );
-
     wp_enqueue_script( 'carousel_init', get_template_directory_uri() . '/assets/js/carousel_init.js', null, null, true );
 
     wp_enqueue_script( 'popper', get_template_directory_uri() . '/assets/js/popper.js', null, null, true );
@@ -206,6 +204,8 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', null, null, true );
 
     wp_enqueue_script( 'reporter', 'https://scripts.usehawk.com/5b8bc7985f431a00597e787a/reporter.min.js?a=5b8bc7685f431a00597e7875', null, null, true );
+
+    wp_enqueue_script( 'jquery' );
 
     /* Pinegrow generated Enqueue Scripts End */
 
