@@ -51,8 +51,8 @@
             </div>             
         </div>                                    
         <script>
-    jquery(function() {
-    jquery('[data-toggle="tool"]').tooltip();
+   $(function() {
+    $('[data-toggle="tooltip"]').tooltip();
 })
 </script>
         <?php wp_footer(); ?>
