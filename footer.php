@@ -49,8 +49,12 @@
                 </div>                 
                 <!-- container end -->
             </div>             
-        </div>                  
-        <script></script>                  
+        </div>                                    
+        <script>
+    $(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
         <?php wp_footer(); ?>
     </body>     
 </html>
