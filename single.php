@@ -66,20 +66,13 @@ get_header(); ?>
                                     <?php endif; ?> 
                                 </div>
                                 <div class="col-md-4"> 
-                                    <?php if ( $tags->have_posts() ) : ?>
-                                        <?php while ( $tags->have_posts() ) : $tags->the_post(); ?>
-                                            <figure class="imghvr-blur">
-                                                <?php
-                                                    if ( has_post_thumbnail() ) {
-                                                        the_post_thumbnail( 'normal' );
-                                                    }
-                                                 ?>
-                                            </figure>
-                                        <?php endwhile; ?>
-                                        <?php wp_reset_postdata(); ?>
-                                    <?php else : ?>
-                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                    <?php endif; ?>
+                                    <figure class="imghvr-blur">
+                                        <?php
+                                            if ( has_post_thumbnail() ) {
+                                                the_post_thumbnail( 'normal' );
+                                            }
+                                         ?>
+                                    </figure>
                                 </div>
                                 <div class="col-md-4"> 
                                     <figure class="imghvr-blur">
