@@ -8,23 +8,10 @@ get_header(); ?>
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php
-                            $tags_args = array($post_tag = get_the_tags ( $post->ID );
-                            // Define an empty array
-                            $ids = array();
-                            // Check if the post has any tags
-                            if ( $post_tag ) {
-                                foreach ( $post_tag as $tag ) {
-                                    $ids[] = $tag->term_id; 
-                                }
-                            }
-                            // Now pass the IDs to tag__in
-                            $args = array(
-                                'post_type' => 'property',
-                                'tag__in'   => $ids,
-                            );
-                            // Now proceed with the rest of your query
-                            $related_posts = new WP_Query( $args );)
-                         ?>
+                            $tags_args = array(
+                                'tag' => 'post_slug'
+                            )
+                        ?>
                         <?php $tags = new WP_Query( $tags_args ); ?>
                         <?php if ( $tags->have_posts() ) : ?>
                             <?php while ( $tags->have_posts() ) : $tags->the_post(); ?>
