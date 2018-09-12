@@ -1337,7 +1337,7 @@ get_header(); ?>
             <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
         </li>                         
     </ul>
-    <button type="button" class="btn btn-light" title="aaa" data-toggle="tooltip" data-placement="right" data-trigger="hover">
+    <button type="button" class="btn btn-light" title="aaa" data-toggle="tooltip" data-placement="right" data-trigger="hover" data-container="body">
         <?php _e( 'Label', 'st2' ); ?>
     </button>
 </div>                                 
