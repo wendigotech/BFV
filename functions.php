@@ -207,8 +207,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_enqueue_script( 'jquerypowertip', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-powertip/1.2.0/jquery.powertip.min.js', null, null, true );
 
-    wp_enqueue_script( null, null, null, null, true );
-
     wp_enqueue_script( 'popper', get_template_directory_uri() . '/assets/js/popper.js', null, null, true );
 
     /* Pinegrow generated Enqueue Scripts End */
