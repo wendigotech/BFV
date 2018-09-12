@@ -111,7 +111,7 @@ figcaption p {
     font-weight: 900;
     text-align: center;
     word-break: keep-all;
-    font-size: 2vw;
+    font-size: 1,5vw;
 }
 
 [class*=' imghvr-'] a.btn,
