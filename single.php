@@ -9,7 +9,7 @@ get_header(); ?>
                     <div> 
                         <?php
                             $tags_args = array(
-                                'tag' => get_queried_object()->post_name;
+                                'tag' => 'post_name'
                             )
                         ?>
                         <?php $tags = new WP_Query( $tags_args ); ?>
