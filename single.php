@@ -23,16 +23,7 @@ get_header(); ?>
                         <?php endif; ?> 
                         <div class="container">
                             <?php if ( ($tags) { echo 'Related Posts' ) : ?>
-                                <?php
-                                    $related_args = array(
-                                        'tag__in' => 'term_id',
-                                        'nopaging' => true,
-                                        'order' => 'ASC',
-                                        'orderby' => 'date'
-                                    )
-                                ?>
-                                <?php $related = new WP_Query( $related_args ); ?>
-                                <?php if ( $related->have_posts() ) : ?>
+                                <?php if ( have_posts() ) : ?>
                                     <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
                                         <?php echo $tags = wp_get_post_tags($post->ID); ?>
                                     </div>
