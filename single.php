@@ -7,28 +7,14 @@ get_header(); ?>
             <div class="content-area col-md-12" id="primary"> 
                 <main class="site-main" id="main"> 
                     <div> 
-                        <?php
-                            $tags_args = array(
-                                'tag' => 'post_name'
-                            )
-                        ?>
-                        <?php $tags = new WP_Query( $tags_args ); ?>
-                        <?php if ( $tags->have_posts() ) : ?>
-                            <?php $tags_item_number = 0; ?>
-                            <?php while ( $tags->have_posts() && $tags_item_number++ < 1 ) : $tags->the_post(); ?>
-                                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
-                                    <header class="entry-header"> 
-                                        <h1 class="text-center text-light"><?php the_title(); ?></h1> 
-                                    </header>                                                     
-                                    <div class="entry-content"> 
-                                        <?php the_content(); ?> 
-                                    </div>                                                     
-                                </article>
-                            <?php endwhile; ?>
-                            <?php wp_reset_postdata(); ?>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                        <?php endif; ?>
+                        <article> 
+                            <header class="entry-header"> 
+                                <h1 class="text-center text-light"><?php the_title(); ?></h1> 
+                            </header>                                             
+                            <div class="entry-content"> 
+                                <?php the_content(); ?> 
+                            </div>                                             
+                        </article>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-4">
