@@ -23,7 +23,7 @@ get_header(); ?>
                                         <?php endif; ?>
                                         <div class="container">
                                             <div class="row">
-                                                <?php   $orig_post = $post;   global $post;   $tags = wp_get_post_tags($post- ?>
+                                                <?php $orig_post = $post;   global $post;   $tags = wp_get_post_tags($post->ID); ?>
                                                 <div class="col-md-4">
                                                     <figure class="imghvr-blur">
                                                         <?php
