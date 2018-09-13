@@ -6,7 +6,7 @@ get_header(); ?>
                         <div class="row"> 
                             <div class="content-area col-md-12" id="primary"> 
                                 <main class="site-main" id="main"> 
-                                            <div> 
+                                    <div> 
                                         <?php if ( have_posts() ) : ?>
                                             <?php while ( have_posts() ) : the_post(); ?>
                                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
@@ -21,26 +21,26 @@ get_header(); ?>
                                         <?php else : ?>
                                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                                         <?php endif; ?>
-                                        <?php ID);
+                                        <?php $my_query = new WP_Query( $my_query_args ); ?>
+                                        <?php if ( $my_query->have_posts() ) : ?>
+                                                    <div class="container">
+                                                <?php ID);
 
-                                             if ($tags) {
-                                             $tag_ids = array();
-                                             foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
-                                             $args=array(
-                                             'tag__in' => $tag_ids,
-                                             'post__not_in' => array($post->ID),
-                                             'posts_per_page'=>4, // Number of related posts to display.
-                                             'caller_get_posts'=>1
-                                             );
+                                                     if ($tags) {
+                                                     $tag_ids = array();
+                                                     foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+                                                     $args=array(
+                                                     'tag__in' => $tag_ids,
+                                                     'post__not_in' => array($post->ID),
+                                                     'posts_per_page'=>4, // Number of related posts to display.
+                                                     'caller_get_posts'=>1
+                                                     );
 
-                                             $my_query = new wp_query( $args );
+                                                     $my_query = new wp_query( $args );
 
-                                             while( $my_query->have_posts() ) {
-                                             $my_query->the_post();
-                                        ?>
-                                            <?php $my_query = new WP_Query( $my_query_args ); ?>
-                                            <?php if ( $my_query->have_posts() ) : ?>
-                                                <div class="container">
+                                                     while( $my_query->have_posts() ) {
+                                                     $my_query->the_post();
+                                                ?>
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
@@ -76,27 +76,27 @@ get_header(); ?>
                                                         <div class="col-md-4"> 
 </div>
                                                     </div>
-                                                </div>
-                                            <?php else : ?>
-                                                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                                            <?php endif; ?>
-                                            <?php ID);
-                                                
-                                                 if ($tags) {
-                                                 $tag_ids = array();
-                                                 foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
-                                                 $args=array(
-                                                 'tag__in' => $tag_ids,
-                                                 'post__not_in' => array($post->ID),
-                                                 'posts_per_page'=>4, // Number of related posts to display.
-                                                 'caller_get_posts'=>1
-                                                 );
-                                                
-                                                 $my_query = new wp_query( $args );
-                                                
-                                                 while( $my_query->have_posts() ) {
-                                                 $my_query->the_post();
-                                            ?> 
+                                                    <?php ID);
+                                                        
+                                                         if ($tags) {
+                                                         $tag_ids = array();
+                                                         foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+                                                         $args=array(
+                                                         'tag__in' => $tag_ids,
+                                                         'post__not_in' => array($post->ID),
+                                                         'posts_per_page'=>4, // Number of related posts to display.
+                                                         'caller_get_posts'=>1
+                                                         );
+                                                        
+                                                         $my_query = new wp_query( $args );
+                                                        
+                                                         while( $my_query->have_posts() ) {
+                                                         $my_query->the_post();
+                                                    ?>
+                                            </div>
+                                        <?php else : ?>
+                                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                                        <?php endif; ?> 
                                     </div>                                     
                                 </main>                                 
                             </div>                             
