@@ -55,7 +55,7 @@ get_header(); ?>
                                                     <div class="col-md-4"> 
 </div>
                                             </div>
-                                            <?php?>
+                                            <?php $post = $orig_post;   wp_reset_query(); ?>
                                         </div>                                         
                                     </div>                                     
                                 </main>                                 
