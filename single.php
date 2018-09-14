@@ -23,9 +23,7 @@ get_header(); ?>
                                         <?php endif; ?>
                                         <div class="container">
                                             <?php
-                                                $my_query_args = array(
-                                                    'tag_id' => wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
-                                                )
+                                                $my_query_args = array()
                                             ?>
                                             <?php $my_query = new WP_Query( $my_query_args ); ?>
                                             <?php if ( $my_query->have_posts() ) : ?>
