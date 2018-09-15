@@ -1,7 +1,7 @@
 <?php
 //* Pinegrow Starter Theme 2 Theme Tweaks
 
-//* Pro-tip: To personnalize your theme and ease further maintenance, always prefix your function names with the text domain (= theme slug in your Pinegrow theme settings, for example st2_FunctionName). 
+//* Pro-tip: To personnalize your theme and ease further maintenance, always prefix your function names with the text domain (= theme slug in your Pinegrow theme settings, for example st2_FunctionName).
 
 //* Making your custom Theme conform to the l18n process is done by doing a search on the (current) 'st2' string then replace it with your own text domain.
 //* Read more about internationalization https://codex.wordpress.org/I18n_for_WordPress_Developers
@@ -91,7 +91,7 @@ if (!function_exists('st2_slbd_count_widgets')) {
 				// If two widgets are published
 				$widget_classes .= ' col-md-2';
 			elseif ($widget_count >= 3) :
-				// Three widgets per row if there's three or more widgets 
+				// Three widgets per row if there's three or more widgets
 				$widget_classes .= ' col-md-4';
 			elseif (2 == $widget_count) :
 				// If two widgets are published
