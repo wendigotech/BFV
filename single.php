@@ -21,7 +21,9 @@ get_header(); ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                         <?php endif; ?>
-                        <?php echo wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 3 )); ?>
+                        <div class="pg-empty-placeholder">
+                            <?php wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 3 )); ?>
+                        </div>
                         <div class="row pg-empty-placeholder"></div>                                         
                     </div>                                     
                 </main>                                 
