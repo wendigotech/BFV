@@ -12,7 +12,7 @@ get_header(); ?>
                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-12">                                                                  
+                                            <div class="col-md-12 d-flex justify-content-center align-items-center">                                                                  
 
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
