@@ -14,7 +14,11 @@ get_header(); ?>
                                         <div class="row">
                                             <div class="col-md-8">                                                                  
 
-                                                <img src="http://pinegrow.com/placeholders/img14.jpg"/>
+                                                <?php
+                                                    if ( has_post_thumbnail() ) {
+                                                        the_post_thumbnail( 'thumbnail' );
+                                                    }
+                                                 ?>
                                             </div>
                                             <div class="col-md-4 d-flex flex-column-reverse justify-content-center">
                                                 <header class="entry-header"> 
@@ -33,9 +37,7 @@ get_header(); ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                         <?php endif; ?>
-                        <div>
-                            <?php wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 3 )); ?>
-                        </div>
+                        <?php echo wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 3 )); ?>
                         <div class="row pg-empty-placeholder"></div>                                         
                     </div>                                     
                 </main>                                 
