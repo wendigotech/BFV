@@ -22,7 +22,9 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                         <?php endif; ?>
                         <div class="container">
-                            <?php wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 6 )); ?>
+                            <div class="row">
+                                <?php wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 6 )); ?>
+                            </div>
                         </div>
                         <div class="row pg-empty-placeholder"></div>                                         
                     </div>                                     
