@@ -10,18 +10,30 @@ get_header(); ?>
                         <?php if ( have_posts() ) : ?>
                             <?php while ( have_posts() ) : the_post(); ?>
                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
-                                    <header class="entry-header"> 
-                                        <h1 class="text-center text-light"><?php the_title(); ?></h1> 
-                                    </header>                                                     
-                                    <div class="entry-content"> 
-                                        <?php the_content(); ?> 
-                                    </div>                                                     
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-8">                                                                  
+
+                                                <img src="http://pinegrow.com/placeholders/img14.jpg"/>
+                                            </div>
+                                            <div class="col-md-4 d-flex flex-column-reverse justify-content-center">
+                                                <header class="entry-header"> 
+                                                    <h1 class="text-center text-light"><?php the_title(); ?></h1> 
+                                                </header>                                                                                                                                  
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="entry-content"> 
+                                                    <?php the_content(); ?> 
+                                                </div>                                                                                                                                  
+                                            </div>
+                                        </div>
+                                    </div>                                                                                                          
                                 </article>
                             <?php endwhile; ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                         <?php endif; ?>
-                        <div class="pg-empty-placeholder">
+                        <div>
                             <?php wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 3 )); ?>
                         </div>
                         <div class="row pg-empty-placeholder"></div>                                         
