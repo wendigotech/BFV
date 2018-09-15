@@ -20,7 +20,7 @@ get_header(); ?>
                                                                     }
                                                                  ?>
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
                                                                 <header class="entry-header"> 
                                                                     <h1 class="text-center text-light"><?php the_title(); ?></h1> 
                                                                 </header>
