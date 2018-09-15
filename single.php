@@ -12,7 +12,7 @@ get_header(); ?>
                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-8">                                                                  
+                                            <div class="col-md-12">                                                                  
 
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
@@ -20,7 +20,7 @@ get_header(); ?>
                                                     }
                                                  ?>
                                             </div>
-                                            <div class="col-md-4 d-flex flex-column-reverse justify-content-center">
+                                            <div class="d-flex flex-column-reverse justify-content-center col-md-12">
                                                 <header class="entry-header"> 
                                                     <h1 class="text-center text-light"><?php the_title(); ?></h1> 
                                                 </header>                                                                                                                                  
