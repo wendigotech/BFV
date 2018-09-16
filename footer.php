@@ -14,9 +14,12 @@
             <div class="wrapper text-light" id="wrapper-footer">
                 <div class="container"> 
                     <div class="row"> 
-                        <div class="col-md-4">                              
+                        <div class="footer-icons col-md-2">                              
 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
+                        </div>
+                        <div class="footer-icons col-md-2">                              
+
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img4', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
                         </div>
                         <div class="col-md-4">                              
