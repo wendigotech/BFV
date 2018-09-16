@@ -47,7 +47,7 @@
                                 <?php the_custom_logo(); ?>
                             <?php endif; ?> 
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 justify-content-center align-items-center align-content-center flex-wrap d-flex">
                             <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'social',
