@@ -12,8 +12,7 @@ get_header(); ?>
                                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                                     <div class="container">
                                                         <div class="row">
-                                                            <div class="d-flex justify-content-center align-items-center col-md-6">                                                                  
-
+                                                            <div class="d-flex justify-content-center align-items-center col-md-6"> 
                                                                 <?php
                                                                     if ( has_post_thumbnail() ) {
                                                                         the_post_thumbnail( 'large' );
@@ -26,12 +25,12 @@ get_header(); ?>
                                                                 </header>
                                                                 <div class="entry-content"> 
                                                                     <?php the_content(); ?> 
-                                                                </div>                                                                                                                                  
+                                                                </div>                                                                 
                                                             </div>
-                                                            <div class="col-md-12">                                                                  
+                                                            <div class="col-md-12"> 
 </div>
                                                         </div>
-                                                    </div>                                                                                                          
+                                                    </div>                                                     
                                                 </article>
                                             <?php endwhile; ?>
                                         <?php else : ?>
