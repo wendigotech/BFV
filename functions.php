@@ -179,6 +179,18 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img', array(
+        'label' => __( 'Footer Image2', 'st2' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img2', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img2', array(
         'label' => __( 'Footer Image', 'st2' ),
         'type' => 'media',
         'mime_type' => 'image',

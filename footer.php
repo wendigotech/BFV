@@ -36,7 +36,7 @@
                             <?php endif; ?> 
                         </div>                         
                         <!--col end -->                         
-                        <div class="col-md-4">
+                        <div class="col-md-8">
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
                                     <p><?php echo get_theme_mod( 'footer_text', __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ) ); ?></p> 
@@ -46,11 +46,11 @@
                         </div>
                         <div class="col-md-2">                              
 
-                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img', 'http://pinegrow.com/placeholders/img18.jpg' ), 'thumbnail' ) ?>"/>
+                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img', 'http://pinegrow.com/placeholders/img18.jpg' ), 'normal' ) ?>"/>
                         </div>
                         <div class="col-md-2">                              
 
-                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
+                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
                         </div>
                     </div>                     
                 </div>                 
