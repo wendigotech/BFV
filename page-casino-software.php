@@ -27,7 +27,7 @@ get_header(); ?>
                             <figcaption>
                                 <div class="col-md-12"> 
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
-                                    <?php the_excerpt( ); ?>
+                                    <?php the_content(); ?>
                                 </div>
                             </figcaption>
                         </a>
@@ -51,7 +51,7 @@ get_header(); ?>
                             <figcaption>
                                 <div class="col-md-12"> 
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
-                                    <?php the_excerpt( ); ?>
+                                    <?php the_content(); ?>
                                 </div>
                             </figcaption>
                         </a>
@@ -75,7 +75,7 @@ get_header(); ?>
                             <figcaption>
                                 <div class="col-md-12"> 
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
-                                    <?php the_excerpt( ); ?>
+                                    <?php the_content(); ?>
                                 </div>
                             </figcaption>
                         </a>
@@ -99,7 +99,7 @@ get_header(); ?>
                             <figcaption>
                                 <div class="col-md-12"> 
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
-                                    <?php the_excerpt( ); ?>
+                                    <?php the_content(); ?>
                                 </div>
                             </figcaption>
                         </a>
@@ -123,7 +123,7 @@ get_header(); ?>
                             <figcaption>
                                 <div class="col-md-12"> 
                                     <h6 class="text-center display-5 "><?php the_title(); ?></h6>
-                                    <?php the_excerpt( ); ?>
+                                    <?php the_content(); ?>
                                 </div>
                             </figcaption>
                         </a>

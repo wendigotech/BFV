@@ -36,6 +36,7 @@ get_header(); ?>
                                         <?php else : ?>
                                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                                         <?php endif; ?>
+                                        <span class="text-light text-center"><?php the_excerpt( ); ?></span>
                                         <?php echo wcr_related_posts(array(    'taxonomy' => 'post_tag',    'limit' => 3 )); ?>
                                         <div class="row pg-empty-placeholder"></div>                                         
                                     </div>                                     
