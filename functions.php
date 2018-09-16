@@ -161,6 +161,78 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'header_settings'
     ) ) );
 
+    $wp_customize->add_setting( 'footer_img3', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img3', array(
+        'label' => __( 'Payment Icon', 'st2' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img4', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img4', array(
+        'label' => __( 'Payment Icon', 'st2' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img5', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img5', array(
+        'label' => __( 'Payment Icon', 'st2' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img6', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img6', array(
+        'label' => __( 'Payment Icon', 'st2' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img7', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img7', array(
+        'label' => __( 'Payment Icon', 'st2' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img8', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img8', array(
+        'label' => __( 'Payment Icon', 'st2' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
         'default' => __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ),
