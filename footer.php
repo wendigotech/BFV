@@ -41,11 +41,11 @@
                                 <?php the_custom_logo(); ?>
                             <?php endif; ?> 
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 d-flex flex-row justify-content-center align-items-center align-content-center">
                             <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'social',
-                                        'menu_class' => 'navbar-nav text-center flex-row d-inline-flex justify-content-center align-items-center align-content-center flex-wrap',
+                                        'menu_class' => 'navbar-nav text-center d-inline-flex justify-content-center align-items-center align-content-center flex-wrap flex-row',
                                         'container' => '',
                                         'depth' => '2',
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
