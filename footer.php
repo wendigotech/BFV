@@ -54,7 +54,10 @@
                             </footer>                             
                         </div>
                         <div class="col-md-2 col-sm-6"> 
-                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img', 'http://pinegrow.com/placeholders/img18.jpg' ), 'normal' ) ?>"/>
+                            <a href="https://www.begambleaware.org/">
+                                <?php _e( 'Link', 'st2' ); ?>
+                                <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img', 'http://pinegrow.com/placeholders/img18.jpg' ), 'normal' ) ?>"/>
+                            </a>
                         </div>
                         <div class="col-md-2 col-sm-6"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
