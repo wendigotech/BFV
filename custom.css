@@ -100,7 +100,7 @@ figure {
 }
 
 figcaption h6 {
-    font-size: 1vw;
+    font-size: 1em;
     text-align: center;
     padding-top: 5px;
 }
@@ -111,7 +111,7 @@ figcaption p {
     font-weight: 900;
     text-align: center;
     word-break: keep-all;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 [class*=' imghvr-'] a.btn,
