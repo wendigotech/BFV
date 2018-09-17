@@ -16,10 +16,7 @@ get_header(); ?>
                                     <div <?php post_class( 'entry-content' ); ?> id="post-<?php the_ID(); ?>"> 
                                         <div id="exampleAccordion" data-children=".item">
                                             <div class="item">
-                                                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2"><h3><?php the_content(); ?></h3></a>
-                                                <div id="exampleAccordion2" class="collapse" role="tabpanel">
-                                                    <p class="mb-3"><?php the_content(); ?></p>
-                                                </div>
+                                                <?php the_content(); ?>
                                             </div>
                                         </div>                                                         
                                     </div>
