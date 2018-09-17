@@ -32,16 +32,7 @@
                         <div class="footer-icons col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img8', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
-                        <div class="col-md-4">
-                            <?php if ( ! has_custom_logo() ) : ?>
-                                <div> 
-                                    <a rel="home" class="navbar-brand text-light" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
-                                </div>
-                            <?php else : ?>
-                                <?php the_custom_logo(); ?>
-                            <?php endif; ?> 
-                        </div>
-                        <div class="col-md-8 d-flex flex-row justify-content-center align-items-center align-content-center">
+                        <div class="d-flex flex-row justify-content-center align-items-center align-content-center col-md-12">
                             <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'social',
