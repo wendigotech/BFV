@@ -14,22 +14,22 @@
             <div class="wrapper text-light" id="wrapper-footer">
                 <div class="container"> 
                     <div class="row"> 
-                        <div class="col-md-2"> 
+                        <div class="col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
-                        <div class="footer-icons col-md-2"> 
+                        <div class="footer-icons col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img4', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
-                        <div class="footer-icons col-md-2"> 
+                        <div class="footer-icons col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img5', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
-                        <div class="footer-icons col-md-2"> 
+                        <div class="footer-icons col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img6', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
-                        <div class="footer-icons col-md-2"> 
+                        <div class="footer-icons col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img7', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
-                        <div class="footer-icons col-md-2"> 
+                        <div class="footer-icons col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img8', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
                         <div class="col-md-4">
@@ -45,7 +45,7 @@
                             <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'social',
-                                        'menu_class' => 'navbar-nav mt-2 float-left ml-auto flex-row',
+                                        'menu_class' => 'navbar-nav flex-row text-center ',
                                         'container' => '',
                                         'depth' => '2',
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
@@ -62,10 +62,10 @@
                                 <!-- .site-info -->                                 
                             </footer>                             
                         </div>
-                        <div class="col-md-2"> 
+                        <div class="col-md-2 col-sm-6"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img', 'http://pinegrow.com/placeholders/img18.jpg' ), 'normal' ) ?>"/>
                         </div>
-                        <div class="col-md-2"> 
+                        <div class="col-md-2 col-sm-6"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
                         </div>
                     </div>                     
