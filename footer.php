@@ -45,7 +45,7 @@
                             <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'social',
-                                        'menu_class' => 'navbar-nav flex-row text-center ',
+                                        'menu_class' => 'navbar-nav text-center flex-row d-inline-flex justify-content-center align-items-center align-content-center flex-wrap',
                                         'container' => '',
                                         'depth' => '2',
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
