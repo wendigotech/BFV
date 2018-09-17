@@ -13,8 +13,12 @@ get_header(); ?>
                                     <header class="entry-header"> 
                                         <h1 class="text-center text-light"><?php the_title(); ?></h1> 
                                     </header>                                                     
-                                    <div class="entry-content">
-                                        <?php the_content(); ?>
+                                    <div class="entry-content"> 
+                                        <div id="exampleAccordion" data-children=".item">
+                                            <div class="item">
+                                                <?php the_content(); ?>
+                                            </div>
+                                        </div>                                                         
                                     </div>                                                     
                                 </article>
                             <?php endwhile; ?>
