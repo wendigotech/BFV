@@ -111,8 +111,9 @@ figcaption p {
     color: #fdfdfd;
     font-weight: 900;
     text-align: center;
-    word-break: break-all;
-    font-size: 1.9vw;
+    word-break: normal;
+    font-size: 1.7vw;
+    font-style: italic;
 }
 
 [class*=' imghvr-'] a.btn,
