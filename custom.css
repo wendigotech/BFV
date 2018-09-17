@@ -113,7 +113,6 @@ figcaption p {
     text-align: center;
     word-break: break-all;
     font-size: 1.9vw;
-    white-space: pre;
 }
 
 [class*=' imghvr-'] a.btn,
