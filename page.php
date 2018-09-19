@@ -11,18 +11,27 @@ get_header(); ?>
                     <?php endif; ?>                                                                           
                 </div>
             <?php endif; ?> 
-            <div class="content-area col-md-8" id="primary"> 
+            <div class="content-area col-md-12" id="primary"> 
                 <main class="site-main" id="main"> 
-                    <?php get_template_part( 'loop-templates/content-page' ); ?> 
+                    <div> 
+                        <?php if ( have_posts() ) : ?>
+                            <?php while ( have_posts() ) : the_post(); ?>
+                                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
+                                    <header class="entry-header"> 
+                                        <h1 class="text-center"><?php the_title(); ?></h1>                                                          
+                                    </header>                                                     
+                                    <div class="entry-content"> 
+                                        <?php the_content(); ?> 
+                                        <?php wp_link_pages( array() ); ?> 
+                                    </div>                                                                                                          
+                                </article>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+                        <?php endif; ?>                                          
+                    </div>                                     
                 </main>                                 
-            </div>                             
-            <?php if ( get_theme_mod( 'show_right_sidebar' ) ) : ?>
-                <div class="col-md-4 widget-area" role="complementary" id="right-sidebar"> 
-                    <?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
-                        <?php dynamic_sidebar( 'right-sidebar' ); ?>
-                    <?php endif; ?>                                                                           
-                </div>
-            <?php endif; ?> 
+            </div>                                                          
         </div>                         
     </div>                     
 </div>                                 
