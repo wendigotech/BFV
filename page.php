@@ -21,7 +21,7 @@ get_header(); ?>
                                         <h1 class="text-center"><?php the_title(); ?></h1> 
                                     </header>                                                     
                                     <div class="entry-content">
-                                        <?php the_excerpt( ); ?>
+                                        <?php the_content(); ?>
                                     </div>                                                     
                                 </article>
                             <?php endwhile; ?>
