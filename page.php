@@ -20,7 +20,7 @@ get_header(); ?>
                                     <header class="entry-header"> 
                                         <h1 class="text-center"><?php the_title(); ?></h1> 
                                     </header>                                                     
-                                    <div class="entry-content">
+                                    <div class="entry-content text-light">
                                         <?php the_content(); ?>
                                     </div>                                                     
                                 </article>
