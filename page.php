@@ -18,20 +18,45 @@ get_header(); ?>
                             <?php while ( have_posts() ) : the_post(); ?>
                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                     <header class="entry-header"> 
-                                        <h1 class="text-center"><?php the_title(); ?></h1>                                                          
+                                        <h1 class="text-center"><?php the_title(); ?></h1> 
                                     </header>                                                     
                                     <div class="entry-content"> 
-                                        <?php the_content(); ?> 
-                                        <?php wp_link_pages( array() ); ?> 
-                                    </div>                                                                                                          
+                                        <?php the_content(); ?>
+                                        <ul class="text-left text-light"> 
+                                            <li>
+                                                <?php _e( 'Lorem ipsum dolor sit amet', 'st2' ); ?>
+                                            </li>                                                             
+
+                                            <li>
+                                                <?php _e( 'Consectetur adipiscing elit', 'st2' ); ?>
+                                            </li>                                                             
+
+                                            <li>
+                                                <?php _e( 'Integer molestie lorem at massa', 'st2' ); ?>
+                                            </li>                                                             
+
+                                            <li>
+                                                <?php _e( 'Nulla volutpat aliquam velit', 'st2' ); ?> 
+                                                <ul> 
+                                                    <li>
+                                                        <?php _e( 'Phasellus iaculis neque', 'st2' ); ?>
+                                                    </li>                                                                     
+
+                                                    <li>
+                                                        <?php _e( 'Purus sodales ultricies', 'st2' ); ?>
+                                                    </li>                                                                     
+                                                </ul>                                                                 
+                                            </li>                                                             
+                                        </ul>                                                                                                                  
+                                    </div>                                                     
                                 </article>
                             <?php endwhile; ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-                        <?php endif; ?>                                          
+                        <?php endif; ?> 
                     </div>                                     
                 </main>                                 
-            </div>                                                          
+            </div>                             
         </div>                         
     </div>                     
 </div>                                 
