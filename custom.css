@@ -243,14 +243,13 @@ li {
     color: #ffffff;
     font-weight: 900;
     word-break: keep-all;
-    white-space: normal;
     text-align: center;
 }
 
 .grid-content figcaption p.text-center {
     font-family: Abhaya Libre;
     color: #ffffff;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 1.7vw;
     word-break: keep-all;
     white-space: normal;
