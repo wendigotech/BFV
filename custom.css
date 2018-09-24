@@ -246,3 +246,11 @@ figcaption p {
     word-break: keep-all;
     white-space: normal;
 }
+
+.tab-content figcaption p.text-center {
+    font-family: Anaheim;
+    font-size: 1.7vw;
+    color: #ffffff;
+    font-weight: 900;
+    word-break: keep-all;
+}
