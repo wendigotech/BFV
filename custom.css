@@ -247,10 +247,10 @@ figcaption p {
     white-space: normal;
 }
 
-.tab-content figcaption p.text-center {
+p.text-center.d-table.float-left {
     font-family: Anaheim;
-    font-size: 1.7vw;
+    font-size: 1.9vw;
     color: #ffffff;
-    font-weight: 900;
     word-break: keep-all;
+    font-weight: 900;
 }
