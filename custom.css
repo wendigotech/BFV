@@ -245,3 +245,12 @@ figcaption p {
     text-align: center;
     word-break: keep-all;
 }
+
+figcaption p.lead {
+    font-family: Anaheim;
+    font-size: 1vw;
+    color: #fbf7f7;
+    font-weight: 700;
+    word-break: keep-all;
+    text-align: center;
+}
