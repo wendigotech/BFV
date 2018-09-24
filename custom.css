@@ -239,10 +239,9 @@ li {
 
 figcaption p {
     font-family: Anaheim;
-    color: ffffff;
-    font-size: 1.8vw;
+    color: #f9f4f4;
+    font-size: 1.7vw;
     font-weight: 700;
     text-align: center;
     word-break: keep-all;
-    white-space: normal;
 }
