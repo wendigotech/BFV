@@ -127,6 +127,9 @@ ul,
 dl {
     margin-top: 0;
     margin-bottom: 1rem;
+    font-family: Anaheim;
+    font-size: 1em;
+    color: #ffffff;
 }
 
 ol ol,
