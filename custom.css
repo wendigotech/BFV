@@ -246,11 +246,8 @@ figcaption p {
     word-break: keep-all;
 }
 
-figcaption p.lead {
+.slide {
     font-family: Anaheim;
     font-size: 1vw;
-    color: #fbf7f7;
-    font-weight: 700;
-    word-break: keep-all;
-    text-align: center;
+    color: #ffffff;
 }
