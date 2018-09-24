@@ -246,12 +246,10 @@ li {
     text-align: center;
 }
 
-.grid-content figcaption p.text-center {
+p.text-center {
     font-family: Abhaya Libre;
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 1.7vw;
+    font-weight: 900;
+    font-size: 1.5vw;
     word-break: keep-all;
     white-space: normal;
-    text-align: center;
 }
