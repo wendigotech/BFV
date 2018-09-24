@@ -17,7 +17,7 @@
             <header> 
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar"> 
                     <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'st2' ); ?></a> 
-                    <nav class="navbar navbar-expand-lg navbar-light"> 
+                    <nav class="navbar navbar-expand-lg navbar-dark"> 
                         <div class="container"> 
                             <?php if ( ! has_custom_logo() ) : ?>
                                 <div> 

@@ -112,8 +112,7 @@ figcaption p {
     font-weight: 900;
     text-align: center;
     word-break: keep-all;
-    font-size: 1.5em;
-    font-style: italic;
+    font-size: 1.7 vw;
     white-space: normal;
 }
 
@@ -246,4 +245,7 @@ li {
     font-family: Anaheim;
     font-weight: 300;
     color: #f9f2f2;
+}
+
+.grid-carousel figcaption p {
 }
