@@ -26,3 +26,9 @@ figure,
 #page {
     word-wrap: break-word;
 }
+
+.entry-content {
+    font-family: Anaheim;
+    font-size: 1em;
+    color: #ffffff;
+}
