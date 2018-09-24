@@ -46,8 +46,9 @@ h1.navbar-brand > a {
 }
 
 .lead {
-    font-size: $lead-font-size;
-    font-weight: $lead-font-weight;
+    font-size: 1vw;
+    font-weight: 900;
+    word-break: keep-all;
 }
 
 .nav-link {

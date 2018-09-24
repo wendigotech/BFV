@@ -13159,8 +13159,9 @@ h1.navbar-brand > a {
 }
 
 .lead {
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1vw;
+    font-weight: 900;
+    word-break: keep-all;
 }
 
 .nav-link {

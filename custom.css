@@ -233,24 +233,16 @@ div.site-info p {
 
 li {
     font-family: Anaheim;
-    font-weight: 300;
+    font-weight: 700;
     color: #f9f2f2;
 }
 
 figcaption p {
     font-family: Anaheim;
     color: ffffff;
-    font-size: 1.4vw;
+    font-size: 1.8vw;
     font-weight: 700;
     text-align: center;
     word-break: keep-all;
     white-space: normal;
-}
-
-p.text-center.d-table.float-left {
-    font-family: Anaheim;
-    font-size: 1.9vw;
-    color: #ffffff;
-    word-break: keep-all;
-    font-weight: 900;
 }
