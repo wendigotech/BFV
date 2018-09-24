@@ -244,4 +244,5 @@ figcaption p {
     font-weight: 900;
     text-align: center;
     word-break: keep-all;
+    white-space: normal;
 }

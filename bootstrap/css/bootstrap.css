@@ -13316,3 +13316,13 @@ a:hover {
     color: #1d6994;
     text-decoration: underline;
 }
+
+figcaption p {
+    font-family: Abhaya Libre;
+    color: ffffff;
+    font-size: 1.5vw;
+    font-weight: 900;
+    text-align: center;
+    word-break: keep-all;
+    white-space: normal;
+}
