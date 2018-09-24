@@ -33,7 +33,7 @@
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                     <?php wp_nav_menu( array(
                                             'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto text-white',
+                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto text-white float-right',
                                             'container' => '',
                                             'depth' => '2',
                                             'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
