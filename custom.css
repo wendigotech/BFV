@@ -106,16 +106,6 @@ figcaption h6 {
     font-weight: 400;
 }
 
-figcaption p {
-    font-family: Abhaya Libre;
-    color: #fdfdfd;
-    font-weight: 900;
-    text-align: center;
-    word-break: keep-all;
-    font-size: 1.7 vw;
-    white-space: normal;
-}
-
 [class*=' imghvr-'] a.btn,
 [class^=imghvr-] a.btn {
     top: 0;
@@ -247,10 +237,22 @@ li {
     color: #f9f2f2;
 }
 
-.grid-carousel figcaption p {
+.grid-carousel .carousel-inner .carousel-item figcaption p {
     font-family: Abhaya Libre;
     font-size: 1vw;
-    font-weight: 700;
-    text-align: center;
+    color: #ffffff;
+    font-weight: 900;
     word-break: keep-all;
+    white-space: normal;
+    text-align: center;
+}
+
+.grid-content figcaption p.text-center {
+    font-family: Abhaya Libre;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.7vw;
+    word-break: keep-all;
+    white-space: normal;
+    text-align: center;
 }
