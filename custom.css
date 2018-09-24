@@ -248,4 +248,9 @@ li {
 }
 
 .grid-carousel figcaption p {
+    font-family: Abhaya Libre;
+    font-size: 1vw;
+    font-weight: 700;
+    text-align: center;
+    word-break: keep-all;
 }
