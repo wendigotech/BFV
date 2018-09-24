@@ -240,14 +240,8 @@ li {
 figcaption p {
     font-family: Anaheim;
     color: #f9f4f4;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     font-weight: 700;
     text-align: center;
     word-break: keep-all;
-}
-
-.slide {
-    font-family: Anaheim;
-    font-size: 1vw;
-    color: #ffffff;
 }

@@ -40,7 +40,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -72,7 +71,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -104,7 +102,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -136,7 +133,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -168,7 +164,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -200,7 +195,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -236,7 +230,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -268,7 +261,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -300,7 +292,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -364,7 +355,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -396,7 +386,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -432,7 +421,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -464,7 +452,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -496,7 +483,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -528,7 +514,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -560,7 +545,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
@@ -592,7 +576,6 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                             <div class="col-md-12"> 
-                                                <h6 class="text-center display-5 "><?php the_title(); ?></h6>
                                                 <?php the_excerpt( ); ?>
                                             </div>
                                         </figcaption>
