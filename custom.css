@@ -250,3 +250,22 @@ div.entry-content p {
     font-family: Anaheim;
     font-size: 1em;
 }
+
+.entry-content {
+    font-family: Anaheim;
+    font-size: 1em;
+    color: #ffffff;
+    pg-id: 6;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: Anaheim;
+    font-size: 1em;
+    color: #ffffff;
+    pg-file: "cs-source-12-26-40";
+    pg-id: 11;
+}
