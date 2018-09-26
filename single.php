@@ -12,14 +12,7 @@ get_header(); ?>
                                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                                     <div class="container">
                                                         <div class="row">
-                                                            <div class="d-flex justify-content-center align-items-center col-md-6"> 
-                                                                <?php
-                                                                    if ( has_post_thumbnail() ) {
-                                                                        the_post_thumbnail( 'large' );
-                                                                    }
-                                                                 ?>
-                                                            </div>
-                                                            <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+                                                            <div class="d-flex justify-content-center align-items-center flex-column col-md-12">
                                                                 <header class="entry-header"> 
                                                                     <h1 class="text-center text-light"><?php the_title(); ?></h1> 
                                                                 </header>
