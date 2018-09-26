@@ -269,13 +269,3 @@ dl {
     pg-file: "cs-source-12-26-40";
     pg-id: 11;
 }
-
-@media (max-width:575px) {
-    .grid-content .nav-pills {
-        grid-area: 5 / 2 / 8 / 8;
-    }
-}
-
-.grid-content .nav-pills {
-    grid-area: 5 / 3 / 7 / 7;
-}
