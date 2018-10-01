@@ -269,3 +269,9 @@ dl {
     pg-file: "cs-source-12-26-40";
     pg-id: 11;
 }
+
+p.text-center {
+    font-family: Anaheim;
+    font-weight: 700;
+    font-size: 17px;
+}
