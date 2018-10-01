@@ -4,7 +4,9 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1">
         <div class="row">
-            <?php the_content(); ?>
+            <div class="col-md-12">
+                <?php the_content(); ?>
+            </div>
         </div>
         <div class="container grid-3">
             <?php
