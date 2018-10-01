@@ -5,7 +5,7 @@ get_header(); ?>
     <div class="container" id="content" tabindex="-1">
         <div class="row">
             <div class="col-md-12"> 
-                <?php the_content(); ?> 
+                <p class="text-center"><?php the_content(); ?></p> 
             </div>
         </div>
         <div class="container grid-3">
