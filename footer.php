@@ -13,7 +13,7 @@
             <?php endif; ?> 
             <div class="wrapper text-light" id="wrapper-footer">
                 <div class="container"> 
-                    <div class="row"> 
+                    <div class="row no-gutters"> 
                         <div class="col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
                         </div>
@@ -31,7 +31,10 @@
                         </div>
                         <div class="footer-icons col-md-2 col-sm-2 col-4"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img8', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>" class="footer-icons"/>
-                        </div>
+                        </div>                         
+                        <!--col end -->                         
+                    </div>                     
+                    <div class="row">
                         <div class="d-flex flex-row justify-content-center align-items-center align-content-center col-md-12 mb-5 mt-5">
                             <?php if ( has_nav_menu( 'social' ) ) : ?>
                                 <?php wp_nav_menu( array(
@@ -43,8 +46,7 @@
                                         'walker' => new wp_bootstrap4_navwalker()
                                 ) ); ?>
                             <?php endif; ?> 
-                        </div>                         
-                        <!--col end -->                         
+                        </div>
                         <div class="col-md-8">
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
@@ -61,7 +63,7 @@
                         <div class="col-md-2 col-sm-6"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
                         </div>
-                    </div>                     
+                    </div>
                 </div>                 
                 <!-- container end -->
             </div>             
