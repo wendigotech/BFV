@@ -4,8 +4,8 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1">
         <div class="row">
-            <div class="col-md-12"> 
-                <p class="text-center"><?php _e( 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'st2' ); ?></p> 
+            <div class="col-md-12">
+                <?php the_content(); ?>
             </div>
         </div>
         <div class="container grid-3">
