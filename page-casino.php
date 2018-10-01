@@ -3,6 +3,17 @@ get_header(); ?>
 
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1"> 
+        <div class="row">
+            <?php if ( have_posts() ) : ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <div <?php post_class( 'text-light col-md-12' ); ?> id="post-<?php the_ID(); ?>"> 
+                        <?php the_content(); ?> 
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+            <?php endif; ?>
+        </div>
         <div class="container grid-1">
             <?php
                 $casino_args = array(
