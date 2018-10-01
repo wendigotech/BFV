@@ -183,7 +183,7 @@ get_header(); ?>
             </div>
             <ol class="carousel-indicators position-relative mt-4"> 
                 <li data-target="#carousel1" data-slide-to="0" class="active border border-primary"></li>                                 
-                <li data-target="#carousel1" data-slide-to="1" class="border border-primary"></li>                                                                  
+                <li data-target="#carousel1" data-slide-to="1" class="border border-primary"></li>                                 
             </ol>                             
         </div>
     </div>                     
@@ -900,7 +900,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <ul class="nav nav-pills" role="tablist" style="grid-area:5 / 3 / 8 / 7;"> 
+    <ul class="nav nav-pills pl-5 ml-3" role="tablist" style="grid-area:5 / 3 / 8 / 7;"> 
         <li class="nav-item align-self-center"> 
             <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
         </li>                         
