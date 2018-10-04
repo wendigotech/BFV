@@ -187,7 +187,15 @@ get_header(); ?>
             </ol>                             
         </div>
     </div>                     
-    <div class="tab-content" style="grid-area:6 / 1 / 14 / 9;">
+    <div class="container" style="grid-area:5 / 1 / 7 / 9;">
+        <div class="row">
+            <div class="col-md-12 text-light">
+                <h3 class="text-center text-light"><?php _e( 'Column title', 'st2' ); ?></h3> 
+                <p><?php _e( 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'st2' ); ?></p> 
+            </div>
+        </div>
+    </div>
+    <div class="tab-content" style="grid-area:8 / 1 / 14 / 9;">
         <div class="tab-pane active" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
             <div class="container grid-content">
                 <?php
@@ -455,6 +463,17 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
+                <ul class="nav nav-pills pl-5 ml-3" role="tablist" style="grid-area:1 / 3 / 2 / 6;"> 
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
+                    </li>                                     
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
+                    </li>                                     
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
+                    </li>                                     
+                </ul>
             </div>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
@@ -900,17 +919,6 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <ul class="nav nav-pills pl-5 ml-3" role="tablist" style="grid-area:5 / 3 / 8 / 7;"> 
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
-        </li>                         
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
-        </li>                         
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
-        </li>                         
-    </ul>
 </div>                                 
 
 <?php get_footer(); ?>

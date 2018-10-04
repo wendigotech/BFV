@@ -7,7 +7,7 @@ get_header(); ?>
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div <?php post_class( 'col-md-12 text-light' ); ?> id="post-<?php the_ID(); ?>">
-                        <p class="text-center"><?php the_content(); ?></p>                                          
+                        <p class="text-center"><?php the_content(); ?></p> 
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
