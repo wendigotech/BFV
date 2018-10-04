@@ -238,10 +238,10 @@ li {
 }
 
 figcaption p {
-    font-family: Anaheim;
+    font-family: Roboto;
     color: #f9f4f4;
     font-size: 1.5vw;
-    font-weight: 700;
+    font-weight: 300;
     text-align: center;
     word-break: keep-all;
 }
