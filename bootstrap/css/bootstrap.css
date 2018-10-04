@@ -13249,9 +13249,9 @@ h2,
 
 h3,
 .h3 {
-    font-size: 1.75rem;
     font-family: Roboto;
     font-weight: 500;
+    font-size: 25px;
 }
 
 h4,

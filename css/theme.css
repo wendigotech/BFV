@@ -32,3 +32,26 @@ figure,
     font-size: 1em;
     color: #ffffff;
 }
+
+h2,
+.h2 {
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h3,
+.h3 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+p {
+    margin-top: 0;
+    font-family: Roboto;
+    word-break: keep-all;
+    font-size: 2vw;
+    color: #ffffff;
+    font-weight: 300;
+}
