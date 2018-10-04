@@ -47,7 +47,7 @@
                                 ) ); ?>
                             <?php endif; ?> 
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
                                     <p><?php echo get_theme_mod( 'footer_text', __( '&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est', 'st2' ) ); ?></p> 
@@ -55,12 +55,12 @@
                                 <!-- .site-info -->                                 
                             </footer>                             
                         </div>
-                        <div class="col-md-2 col-sm-6" href="https://www.begambleaware.org/"> 
+                        <div class="col-sm-6 col-md-1" href="https://www.begambleaware.org/"> 
                             <a href="https://www.begambleaware.org/">
                                 <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img', 'http://pinegrow.com/placeholders/img18.jpg' ), 'normal' ) ?>" href="https://www.begambleaware.org/"/>
                             </a>
                         </div>
-                        <div class="col-md-2 col-sm-6"> 
+                        <div class="col-sm-6 col-md-1"> 
                             <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img11.jpg' ), 'normal' ) ?>"/>
                         </div>
                     </div>
