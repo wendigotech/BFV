@@ -189,10 +189,16 @@ get_header(); ?>
     </div>                     
     <div class="container" style="grid-area:5 / 1 / 7 / 9;">
         <div class="row">
-            <div class="col-md-12 text-light">
-                <h3 class="text-center text-light"><?php _e( 'Column title', 'st2' ); ?></h3> 
-                <p><?php _e( 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'st2' ); ?></p> 
-            </div>
+            <?php if ( have_posts() ) : ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <div <?php post_class( 'col-md-12 text-light text-center' ); ?> id="post-<?php the_ID(); ?>">
+                        <h3 class="text-center text-light"><?php _e( 'Column title', 'st2' ); ?></h3> 
+                        <p><?php _e( 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'st2' ); ?></p> 
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
+            <?php endif; ?>
         </div>
     </div>
     <div class="tab-content" style="grid-area:8 / 1 / 14 / 9;">
@@ -210,7 +216,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:2 / 2 / 4 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -242,7 +248,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:5 / 6 / 9 / 8;" <?php post_class( 'imghvr-blur bkg6' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:4 / 6 / 8 / 8;" <?php post_class( 'imghvr-blur bkg6' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -274,7 +280,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:7 / 3 / 9 / 6;" <?php post_class( 'imghvr-blur bkg8' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 3 / 8 / 6;" <?php post_class( 'imghvr-blur bkg8' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -306,7 +312,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:7 / 2 / 9 / 3;" <?php post_class( 'imghvr-blur bkg7' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 2 / 8 / 3;" <?php post_class( 'imghvr-blur bkg7' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -338,7 +344,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:4 / 4 / 7 / 6;" <?php post_class( 'imghvr-blur bkg5' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:3 / 4 / 5 / 6;" <?php post_class( 'imghvr-blur bkg5' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -370,7 +376,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:4 / 2 / 7 / 4;" <?php post_class( 'imghvr-blur bkg4' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:3 / 2 / 5 / 4;" <?php post_class( 'imghvr-blur bkg4' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -402,7 +408,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:2 / 6 / 5 / 8;" <?php post_class( 'imghvr-blur bkg3' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 6 / 4 / 8;" <?php post_class( 'imghvr-blur bkg3' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -434,7 +440,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:2 / 3 / 4 / 6;" <?php post_class( 'imghvr-blur bkg2' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 3 / 3 / 6;" <?php post_class( 'imghvr-blur bkg2' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -463,17 +469,6 @@ get_header(); ?>
                 <?php else : ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
                 <?php endif; ?>
-                <ul class="nav nav-pills pl-5 ml-3" role="tablist" style="grid-area:1 / 3 / 2 / 6;"> 
-                    <li class="nav-item align-self-center"> 
-                        <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
-                    </li>                                     
-                    <li class="nav-item align-self-center"> 
-                        <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
-                    </li>                                     
-                    <li class="nav-item align-self-center"> 
-                        <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
-                    </li>                                     
-                </ul>
             </div>
         </div>
         <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
@@ -490,7 +485,7 @@ get_header(); ?>
                 <?php if ( $Sports->have_posts() ) : ?>
                     <?php $Sports_item_number = 0; ?>
                     <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                        <figure style="grid-area:2 / 2 / 5 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 2 / 4 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -522,7 +517,7 @@ get_header(); ?>
                 <?php if ( $Sports->have_posts() ) : ?>
                     <?php $Sports_item_number = 0; ?>
                     <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                        <figure style="grid-area:2 / 5 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 5 / 3 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -554,7 +549,7 @@ get_header(); ?>
                 <?php if ( $Sports->have_posts() ) : ?>
                     <?php $Sports_item_number = 0; ?>
                     <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                        <figure style="grid-area:4 / 5 / 6 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:3 / 5 / 5 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -586,7 +581,7 @@ get_header(); ?>
                 <?php if ( $Sports->have_posts() ) : ?>
                     <?php $Sports_item_number = 0; ?>
                     <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                        <figure style="grid-area:5 / 2 / 9 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:4 / 2 / 8 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -618,7 +613,7 @@ get_header(); ?>
                 <?php if ( $Sports->have_posts() ) : ?>
                     <?php $Sports_item_number = 0; ?>
                     <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                        <figure style="grid-area:6 / 5 / 9 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 5 / 8 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -650,7 +645,7 @@ get_header(); ?>
                 <?php if ( $Sports->have_posts() ) : ?>
                     <?php $Sports_item_number = 0; ?>
                     <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                        <figure style="grid-area:5 / 3 / 9 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:4 / 3 / 8 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -695,7 +690,7 @@ get_header(); ?>
                 <?php if ( $Bingo->have_posts() ) : ?>
                     <?php $Bingo_item_number = 0; ?>
                     <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                        <figure style="grid-area:2 / 2 / 4 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -727,7 +722,7 @@ get_header(); ?>
                 <?php if ( $Bingo->have_posts() ) : ?>
                     <?php $Bingo_item_number = 0; ?>
                     <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                        <figure style="grid-area:2 / 3 / 4 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 3 / 3 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -759,7 +754,7 @@ get_header(); ?>
                 <?php if ( $Bingo->have_posts() ) : ?>
                     <?php $Bingo_item_number = 0; ?>
                     <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                        <figure style="grid-area:2 / 6 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 6 / 3 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -791,7 +786,7 @@ get_header(); ?>
                 <?php if ( $Bingo->have_posts() ) : ?>
                     <?php $Bingo_item_number = 0; ?>
                     <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                        <figure style="grid-area:4 / 5 / 7 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:3 / 5 / 5 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -823,7 +818,7 @@ get_header(); ?>
                 <?php if ( $Bingo->have_posts() ) : ?>
                     <?php $Bingo_item_number = 0; ?>
                     <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                        <figure style="grid-area:4 / 2 / 7 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:3 / 2 / 5 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -855,7 +850,7 @@ get_header(); ?>
                 <?php if ( $Bingo->have_posts() ) : ?>
                     <?php $Bingo_item_number = 0; ?>
                     <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                        <figure style="grid-area:7 / 4 / 9 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 4 / 8 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -887,7 +882,7 @@ get_header(); ?>
                 <?php if ( $Bingo->have_posts() ) : ?>
                     <?php $Bingo_item_number = 0; ?>
                     <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                        <figure style="grid-area:7 / 2 / 9 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:5 / 2 / 8 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
@@ -919,6 +914,17 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
+    <ul class="nav nav-pills pl-5 ml-3" role="tablist" style="grid-area:7 / 3 / 8 / 6;"> 
+        <li class="nav-item align-self-center"> 
+            <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
+        </li>                         
+        <li class="nav-item align-self-center"> 
+            <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
+        </li>                         
+        <li class="nav-item align-self-center"> 
+            <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
+        </li>                         
+    </ul>
 </div>                                 
 
 <?php get_footer(); ?>
