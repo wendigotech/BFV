@@ -48,3 +48,10 @@ h2,
     font-family: Roboto;
     font-weight: 500;
 }
+
+h3,
+.h3 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 25px;
+}
