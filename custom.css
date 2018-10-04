@@ -275,3 +275,11 @@ p.text-center {
     font-weight: 700;
     font-size: 17px;
 }
+
+h2,
+.h2 {
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+    pg-id: 7;
+}
