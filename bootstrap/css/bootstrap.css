@@ -13250,8 +13250,8 @@ h2,
 h3,
 .h3 {
     font-size: 1.75rem;
-    font-family: Abhaya Libre;
-    font-weight: 700;
+    font-family: Roboto;
+    font-weight: 500;
 }
 
 h4,
@@ -13272,10 +13272,11 @@ h5,
 p {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-family: Anaheim;
+    font-family: Roboto;
     word-break: keep-all;
-    font-size: 1vw;
+    font-size: 2vw;
     color: #ffffff;
+    font-weight: 300;
 }
 
 .page-link {

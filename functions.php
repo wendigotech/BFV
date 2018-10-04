@@ -337,6 +337,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'custom' );
     wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
 
+    wp_deregister_style( 'style-4' );
+    wp_enqueue_style( 'style-4', 'https://fonts.googleapis.com/css?family=Roboto', false, null, 'all');
+
     /* Pinegrow generated Enqueue Styles End */
 
     }

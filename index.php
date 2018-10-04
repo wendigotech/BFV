@@ -189,16 +189,9 @@ get_header(); ?>
     </div>                     
     <div class="container" style="grid-area:5 / 1 / 7 / 9;">
         <div class="row">
-            <?php if ( have_posts() ) : ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <div <?php post_class( 'col-md-12 text-light text-center' ); ?> id="post-<?php the_ID(); ?>">
-                        <h3 class="text-center text-light"><?php _e( 'Column title', 'st2' ); ?></h3> 
-                        <p><?php _e( 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'st2' ); ?></p> 
-                    </div>
-                <?php endwhile; ?>
-            <?php else : ?>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'st2' ); ?></p>
-            <?php endif; ?>
+            <div class="col-md-12 text-light text-center">
+                <?php the_content(); ?>
+            </div>
         </div>
     </div>
     <div class="tab-content" style="grid-area:8 / 1 / 14 / 9;">
