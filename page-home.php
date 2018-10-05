@@ -224,7 +224,7 @@ get_header(); ?>
                 <?php if ( $casino->have_posts() ) : ?>
                     <?php $casino_item_number = 0; ?>
                     <?php while ( $casino->have_posts() && $casino_item_number++ < 1 ) : $casino->the_post(); ?>
-                        <figure style="grid-area:1 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                        <figure style="grid-area:1 / 2 / 3 / 3;" <?php post_class( 'imghvr-blur animate' ); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
                                     the_post_thumbnail( 'normal' );
