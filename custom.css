@@ -285,11 +285,11 @@ h2,
     pg-id: 7;
 }
 
-.tab-pane.active {
-    animation: fadeInLeft 1s ease-out normal backwards;
+.grid-content figure {
+    animation: fadeInRight 1s ease-in normal backwards;
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInRight {
     0% {
         opacity: 0;
         transform: translateY(100%);
@@ -297,13 +297,6 @@ h2,
 
     100% {
         opacity: 1;
-        transform: translateY(0%);
+        transform: translateY(0);
     }
-}
-
- {
-}
-
-.grid-content figure {
-    animation: fadeInRight 1s ease-in normal backwards;
 }
