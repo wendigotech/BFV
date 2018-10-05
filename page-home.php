@@ -196,8 +196,8 @@ get_header(); ?>
     </div>
     <div class="tab-content" style="grid-area:9 / 1 / 14 / 9;">
         <div class="container ">
-            <div class="row pg-empty-placeholder no-gutters justify-content-center align-items-start ">
-                <ul class="nav nav-tabs" role="tablist" style=" column-fill: balance;grid-area:7 / 3 / 8 / 6;"> 
+            <div class="row pg-empty-placeholder no-gutters justify-content-center">
+                <ul class="nav nav-tabs mb-5" role="tablist" style=" column-fill: balance;grid-area:7 / 3 / 8 / 6;"> 
                     <li class="nav-item align-self-center"> 
                         <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
                     </li>                                     
