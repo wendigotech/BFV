@@ -56,6 +56,7 @@
     grid-template-columns: 1fr 3fr 2fr 1fr 2fr 1fr 2fr 1fr;
     grid-template-rows: 114px 97px 121px 109px 50px 62px 90px 98px;
     grid-gap: 10px;
+    animation: fadeInRight 1s ease-in normal backwards;
 }
 
 .grid-body {
