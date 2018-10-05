@@ -187,14 +187,29 @@ get_header(); ?>
             </ol>                             
         </div>
     </div>                     
-    <div class="container" style="grid-area:5 / 1 / 7 / 9;">
+    <div class="container" style="grid-area:6 / 1 / 9 / 9;">
         <div class="row">
             <div class="col-md-12 text-light text-center">
                 <?php the_content(); ?>
             </div>
         </div>
     </div>
-    <div class="tab-content" style="grid-area:8 / 1 / 14 / 9;">
+    <div class="tab-content" style="grid-area:9 / 1 / 14 / 9;">
+        <div class="container">
+            <div class="row pg-empty-placeholder no-gutters justify-content-center">
+                <ul class="nav nav-tabs" role="tablist" style=" column-fill: balance;grid-area:7 / 3 / 8 / 6;"> 
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
+                    </li>                                     
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
+                    </li>                                     
+                    <li class="nav-item align-self-center"> 
+                        <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
+                    </li>                                     
+                </ul>
+            </div>
+        </div>
         <div class="tab-pane active" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
             <div class="container grid-content">
                 <?php
@@ -907,17 +922,6 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <ul class="nav nav-pills pl-5 ml-3" role="tablist" style="grid-area:7 / 3 / 8 / 7;"> 
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link active pills shadow-sm" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true"><?php _e( 'Casino', 'st2' ); ?></a> 
-        </li>                         
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link pills shadow-sm" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true"><?php _e( 'Sports', 'st2' ); ?></a> 
-        </li>                         
-        <li class="nav-item align-self-center"> 
-            <a class="nav-link pills shadow-sm" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true"><?php _e( 'Bingo', 'st2' ); ?></a> 
-        </li>                         
-    </ul>
 </div>                                 
 
 <?php get_footer(); ?>
