@@ -210,7 +210,7 @@ get_header(); ?>
                 </ul>
             </div>
         </div>
-        <div class="tab-pane active fade" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
+        <div class="tab-pane active" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
             <div class="container grid-content">
                 <?php
                     $casino_args = array(
@@ -479,7 +479,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </div>
-        <div class="tab-pane fade" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
+        <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
             <div class="container grid-content">
                 <?php
                     $Sports_args = array(
@@ -684,7 +684,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </div>
-        <div class="tab-pane fade" role="tabpanel" aria-labelledby="tab3-tab" id="tab3">
+        <div class="tab-pane" role="tabpanel" aria-labelledby="tab3-tab" id="tab3">
             <div class="container grid-content">
                 <?php
                     $Bingo_args = array(

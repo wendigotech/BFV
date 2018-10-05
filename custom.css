@@ -287,3 +287,25 @@ h2,
 
 .footer-icons {
 }
+
+.tab-pane.active {
+    animation: zoomIn 0.5s ease-out;
+}
+
+ {
+}
+
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+ {
+}
