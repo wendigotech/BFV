@@ -210,7 +210,7 @@ get_header(); ?>
                 </ul>
             </div>
         </div>
-        <div class="tab-pane active" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
+        <div class="tab-pane active fadein" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
             <div class="container grid-content">
                 <?php
                     $casino_args = array(
