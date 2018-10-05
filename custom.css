@@ -99,6 +99,20 @@ li.nav-item.active {
 figure {
     box-shadow: 1px 1px 5px #000000;
     animation: fadeInRight 2s;
+
+    @keyframes fadeInRight {
+        0% {
+            transform: scale(0);
+        }
+
+        70% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
 }
 
 figcaption h6 {
