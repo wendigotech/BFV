@@ -64,3 +64,19 @@ h1,
     color: #ffffff;
     font-weight: 500;
 }
+
+.grid-content figure {
+    animation: fadein 1s ease-out normal backwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
