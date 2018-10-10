@@ -3,6 +3,7 @@ get_header(); ?>
 
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1"> 
+        <div class="row pg-empty-placeholder"></div>
         <div class="row mt-4 mb-4">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
