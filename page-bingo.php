@@ -3,7 +3,8 @@ get_header(); ?>
 
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1">
-        <div class="row">
+        <div class="row pg-empty-placeholder"></div>
+        <div class="row pt-4 pb-4">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div <?php post_class( 'col-md-12 text-light' ); ?> id="post-<?php the_ID(); ?>">
@@ -27,7 +28,7 @@ get_header(); ?>
             <?php if ( $Bingo->have_posts() ) : ?>
                 <?php $Bingo_item_number = 0; ?>
                 <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                    <figure style="grid-area:2 / 2 / 5 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:1 / 1 / 5 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -59,7 +60,7 @@ get_header(); ?>
             <?php if ( $Bingo->have_posts() ) : ?>
                 <?php $Bingo_item_number = 0; ?>
                 <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                    <figure style="grid-area:2 / 4 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:1 / 4 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -91,7 +92,7 @@ get_header(); ?>
             <?php if ( $Bingo->have_posts() ) : ?>
                 <?php $Bingo_item_number = 0; ?>
                 <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                    <figure style="grid-area:4 / 4 / 6 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:4 / 4 / 7 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -155,7 +156,7 @@ get_header(); ?>
             <?php if ( $Bingo->have_posts() ) : ?>
                 <?php $Bingo_item_number = 0; ?>
                 <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                    <figure style="grid-area:6 / 4 / 9 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:7 / 4 / 10 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -219,7 +220,7 @@ get_header(); ?>
             <?php if ( $Bingo->have_posts() ) : ?>
                 <?php $Bingo_item_number = 0; ?>
                 <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                    <figure style="grid-area:9 / 4 / 11 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:10 / 4 / 13 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -283,7 +284,7 @@ get_header(); ?>
             <?php if ( $Bingo->have_posts() ) : ?>
                 <?php $Bingo_item_number = 0; ?>
                 <?php while ( $Bingo->have_posts() && $Bingo_item_number++ < 1 ) : $Bingo->the_post(); ?>
-                    <figure style="grid-area:5 / 2 / 8 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:5 / 1 / 8 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
