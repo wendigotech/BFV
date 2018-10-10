@@ -3,11 +3,10 @@ get_header(); ?>
 
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1"> 
-        <div class="row pg-empty-placeholder"></div>
-        <div class="row pt-4 pb-4">
+        <div class="row mt-5 mb-5">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <div <?php post_class( 'text-light col-md-12' ); ?> id="post-<?php the_ID(); ?>"> 
+                    <div <?php post_class( 'text-light col-md-12 mt-5' ); ?> id="post-<?php the_ID(); ?>"> 
                         <?php the_content(); ?> 
                     </div>
                 <?php endwhile; ?>

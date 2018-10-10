@@ -2,13 +2,12 @@
 get_header(); ?>
 
 <div id="page-wrapper" class="wrapper"> 
-    <div class="container" id="content" tabindex="-1">
-        <div class="row pg-empty-placeholder"></div>
-        <div class="row pt-4 pb-4">
+    <div class="container " id="content" tabindex="-1">
+        <div class="row mt-5 mb-5">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <div <?php post_class( 'col-md-12 text-light' ); ?> id="post-<?php the_ID(); ?>">
-                        <p class="text-center"><?php the_content(); ?></p> 
+                    <div <?php post_class( 'col-md-12 text-light mt-5' ); ?> id="post-<?php the_ID(); ?>">
+                        <p class="text-center mt-5"><?php the_content(); ?></p> 
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
