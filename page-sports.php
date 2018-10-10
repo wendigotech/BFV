@@ -3,7 +3,7 @@ get_header(); ?>
 
 <div id="page-wrapper" class="wrapper"> 
     <div class="container" id="content" tabindex="-1"> 
-        <div class="row">
+        <div class="row mt-4 mb-4">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div <?php post_class( 'text-light col-md-12' ); ?> id="post-<?php the_ID(); ?>"> 
@@ -27,7 +27,7 @@ get_header(); ?>
             <?php if ( $Sports->have_posts() ) : ?>
                 <?php $Sports_item_number = 0; ?>
                 <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                    <figure style="grid-area:2 / 2 / 4 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:1 / 2 / 3 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -59,7 +59,7 @@ get_header(); ?>
             <?php if ( $Sports->have_posts() ) : ?>
                 <?php $Sports_item_number = 0; ?>
                 <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                    <figure style="grid-area:2 / 5 / 5 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:1 / 5 / 4 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -91,7 +91,7 @@ get_header(); ?>
             <?php if ( $Sports->have_posts() ) : ?>
                 <?php $Sports_item_number = 0; ?>
                 <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                    <figure style="grid-area:5 / 5 / 7 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:4 / 5 / 7 / 8;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -123,7 +123,7 @@ get_header(); ?>
             <?php if ( $Sports->have_posts() ) : ?>
                 <?php $Sports_item_number = 0; ?>
                 <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                    <figure style="grid-area:4 / 2 / 7 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:3 / 2 / 7 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -251,7 +251,7 @@ get_header(); ?>
             <?php if ( $Sports->have_posts() ) : ?>
                 <?php $Sports_item_number = 0; ?>
                 <?php while ( $Sports->have_posts() && $Sports_item_number++ < 1 ) : $Sports->the_post(); ?>
-                    <figure style="grid-area:11 / 2 / 13 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:11 / 2 / 14 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
