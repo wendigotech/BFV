@@ -79,7 +79,7 @@ get_header(); ?>
             <?php if ( $Software->have_posts() ) : ?>
                 <?php $Software_item_number = 0; ?>
                 <?php while ( $Software->have_posts() && $Software_item_number++ < 1 ) : $Software->the_post(); ?>
-                    <figure style="grid-area:4 / 1 / 8 / 5;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:4 / 1 / 8 / 4;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
@@ -100,7 +100,7 @@ get_header(); ?>
             <?php if ( $Software->have_posts() ) : ?>
                 <?php $Software_item_number = 0; ?>
                 <?php while ( $Software->have_posts() && $Software_item_number++ < 1 ) : $Software->the_post(); ?>
-                    <figure style="grid-area:4 / 5 / 8 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
+                    <figure style="grid-area:4 / 4 / 8 / 6;" <?php post_class( 'imghvr-blur' ); ?> id="post-<?php the_ID(); ?>">
                         <?php
                             if ( has_post_thumbnail() ) {
                                 the_post_thumbnail( 'normal' );
