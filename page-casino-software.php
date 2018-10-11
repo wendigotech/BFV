@@ -24,8 +24,9 @@ get_header(); ?>
                                          ?>
                                         <a href="<?php echo esc_url( get_permalink() ); ?>">
                                             <?php _e( 'Link', 'st2' ); ?>
-                                            <figcaption>
-</figcaption>
+                                            <figcaption class="d-flex flex-column justify-content-center align-items-center align-content-center">
+                                                <h3><?php _e( 'Read full review', 'st2' ); ?></h3>
+                                            </figcaption>
                                         </a>
                                     </figure>
                                 <?php endwhile; ?>
@@ -44,8 +45,9 @@ get_header(); ?>
                                          ?>
                                         <a href="<?php echo esc_url( get_permalink() ); ?>">
                                             <?php _e( 'Link', 'st2' ); ?>
-                                            <figcaption>
-</figcaption>
+                                            <figcaption class="d-flex flex-column justify-content-center align-items-center align-content-center">
+                                                <h3><?php _e( 'Read full review', 'st2' ); ?></h3>
+                                            </figcaption>
                                         </a>
                                     </figure>
                                 <?php endwhile; ?>
