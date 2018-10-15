@@ -187,7 +187,7 @@ get_header(); ?>
             </ol>                             
         </div>
     </div>                     
-    <div class="container" style="grid-area:6 / 1 / 8 / 9;">
+    <div class="container " style="grid-area:5 / 1 / 8 / 9;">
         <div class="row">
             <div class="col-md-12 text-light text-center">
                 <?php the_content(); ?>
