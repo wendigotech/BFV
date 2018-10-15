@@ -189,7 +189,7 @@ get_header(); ?>
     </div>                     
     <div class="container " style="grid-area:5 / 1 / 8 / 9;">
         <div class="row">
-            <div class="col-md-12 text-light text-center">
+            <div class="col-md-12 text-light">
                 <?php the_content(); ?>
             </div>
         </div>
